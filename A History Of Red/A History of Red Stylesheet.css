@@ -1,0 +1,23 @@
+body {
+font-family: "Adobe Garamond W08", adobe-garamond-pro, AGaramondPro-Regular, "Times New Roman", Times, serif;
+    font-size: 23px;
+    line-height: 1.5em;
+    -webkit-font-smoothing: antialiased;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-style: inherit;
+    margin: 0px;
+    padding: 8%;
+}
+
+a {
+font-family: "Adobe Garamond W08", adobe-garamond-pro, AGaramondPro-Regular, "Times New Roman", Times, serif;
+    font-size: 23px;
+    line-height: 1.5em;
+    -webkit-font-smoothing: antialiased;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-style: inherit;
+    margin: 0px;
+    text-decoration: none;
+}

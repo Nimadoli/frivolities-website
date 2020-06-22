@@ -1,0 +1,71 @@
+body {
+ background-color: rgba(220, 220, 220, 0.2);
+ padding: 42px;
+}
+
+h1 {
+ background-color: #DCDCDC;
+ font-size: 480%; 
+ color: DeepPink; 
+ font-family: 'Gill Sans', sans-serif; 
+ border: 32px solid white;
+ padding: 42px;
+}
+
+h2 {
+ font-size: 220%;
+ font-family: 'Snell Roundhand';
+}
+
+p {
+ color: RebeccaPurple;
+ font-family: 'Gill Sans', sans-serif;
+}
+
+#p01 {
+ color: DarkBlue;
+ font-size: 140%;
+ font-weight: bold;
+}
+
+#p02 {
+ font-size: 280%;
+ font-family: Impact, monospace;
+ font-style: italic;
+ text-align: center;
+}
+
+mark {
+ background-color: Magenta;
+ color: white;
+}
+
+blockquote {
+ font-family: 'Snell Roundhand', serif;
+ font-size: 160%;
+ background-color: white;
+ padding: 24px;
+}
+
+p.dialogue {
+ font-style:oblique;
+ color: DarkGrey;
+}
+
+p.notes {
+ color: DeepPink;
+ font-family: Georgia, serif;
+ background-color: LightYellow;
+ padding: 20px;
+}
+
+pre {
+ background-color: white;
+ padding: 24px;
+}
+
+button {
+ color: magenta;
+ font-size: 150%;
+ font-family: 'Snell Roundhand', serif;
+}
