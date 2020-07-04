@@ -1,14 +1,134 @@
 <!DOCTYPE html>
 <html>
+  <style>
+    body {
+      font-family: Verdana, Geneva, sans-serif;
+      padding: 2%;
+    }
+    h1 {
+      font-family: Zapfino, cursive;
+      font-size: 160%;
+      color: MediumVioletRed;
+    }
+    section {
+      padding: 4%;
+    }
+    table, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    <!-- Optional table layout:
+      table {
+        border-spacing: 12px;
+      }
+    -->
+    td {
+      padding: 6px;
+    }
+    tr:nth-child(even) {
+      background-color: FloralWhite;
+    }
+    tr:nth-child(odd) {
+      background-color: none;
+    }
+    th {
+      background-color: MediumVioletRed;
+      color: white;
+      border: 0;
+      padding: 8px;
+      text-align: left;
+    }
+    #tableimg {
+      width: 180px;
+    }
+    dl {
+      border: 1px solid MediumVioletRed;
+      padding: 2%;
+    }
+    dt {
+      font-weight: bold;
+    }
+  </style>
 <head>
-  <title>Roses are...</title>
+  <title>Roses are red...</title>
 </head>
 <body>
-<h1>Roses are...</h1>
-<picture>
-  <source media="(min-width: 450px)" srcset="https://dy1yydbfzm05w.cloudfront.net/media/catalog/product/cache/a24503e77075b254f14b01bcf13a3a68/f/l/flowerbx-rose-peach-avalanche-product-1000px_1.jpg">
-  <source media="(min-width: 650px)" srcset="https://scaviuscom.files.wordpress.com/2018/04/red-rose.jpg">
-  <img src="https://clickflowersusa.com/wp-content/uploads/2017/08/engagement.jpg" style="width: auto;">
-</picture>
+  <section>
+    <h1>Roses are red...</h1>
+    <p>Resize the page to change the following image.</p>
+    <picture>
+      <source media="(min-width: 1100px)" srcset="https://www.wallpaperup.com/uploads/wallpapers/2017/07/26/1095672/533a0f279be29fd9e86b57cae215e4be-700.jpg">
+      <source media="(min-width: 700px)" srcset="https://dy1yydbfzm05w.cloudfront.net/media/catalog/product/cache/a24503e77075b254f14b01bcf13a3a68/f/l/flowerbx-rose-peach-avalanche-product-1000px_1.jpg">
+      <img src="https://site-files.fiftyflowers.com/FiftyFlowers/Image/Product/Hot-Lady2-350_de950408.jpg" alt="Rose" style="width:auto;">
+    </picture>
+    <p>
+      <mark>Note:</mark> The picture element is not supported in IE12 and earlier or Safari 9.0 and earlier.
+    </p>
+  </section>
+  <section>
+    <h1>Roses to Consider for Your Garden</h1>
+    <table>
+      <caption style="text-align: left;"><h3>Common varieties of rose</h3></caption>
+      <tr>
+        <th colspan="2">Rose variety</th>
+        <th>Appearance</th>
+        <th>Native area</th>
+        <th>Height</th>
+        <th>Sun exposure</th>
+      </tr>
+      <tr>
+        <td>'About Face'</td>
+        <td><i>Rosa Grandiflora 'About Face'</i></td>
+        <td><img id="tableimg" src="https://www.thespruce.com/thmb/FCNsdMmWmokTg6l-yxePiAYHSzc=/2304x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Orangeroses-GettyImages-580827975-59480b055f9b58d58ac3d7f0.jpg" alt="About Face rose"></td>
+        <td>NA; this is a hybrid plant</td>
+        <td>5 to 6 feet</td>
+        <td>Full sun</td>
+      </tr>
+      <tr>
+        <td>'Bonica'</td>
+        <td><i>Rosa 'Bonica'</i></td>
+        <td><img id="tableimg" src="https://www.thespruce.com/thmb/tME1GcHL1nMoghrs84Z-p5Lsk7E=/1920x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/lightpinkroses-2117411_1920-59480be53df78c537b81ee79.jpg" alt="Bonica rose"></td>
+        <td>NA; this is a hybrid plant</td>
+        <td>3 to 5 feet</td>
+        <td>Full sun</td>
+      </tr>
+      <tr style="background-color: FloralWhite">
+        <td>'Cherry Parfait'</td>
+        <td><i>Rosa floribunda 'Cherry Parfait'</i></td>
+        <td><img id="tableimg" src="https://www.thespruce.com/thmb/krNbrK9FtVx37C3dzlkK1RV_3B0=/2398x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Cherryparfaitrose-4876617139_bac25365b1_o-a2c51515d21a4ca3be6f0b4119774642.jpg" alt="Cherry Parfait rose"></td>
+        <td>NA; this is a hybrid plant</td>
+        <td>3 to 4 feet</td>
+        <td>Full sun</td>
+      </tr>
+    </table>
+    <p>
+      <a href="https://www.thespruce.com/types-of-roses-4069722" title="Rose varieties">Source</a>
+    </p>
+  </section>
+  <section>
+    <h1>Gardening Terms</h1>
+    <p>
+      While veteran gardeners understand gardening jargon, those new to the hobby might feel utterly confused by the terminology.  If you're feeling daunted by the new and unfamiliar gardening-specific words, fear not. This handy guide to the most common gardening terms should help you to understand most basic gardening advice.
+    </p>
+    <dl>
+      <dt>Bone meal</dt>
+      <dd>A type of fertiliser made from animal bones. It is a finely ground powder and is used to add phosphorous to the soil.</dd>
+      <br>
+      <dt>Chlorosis</dt>
+      <dd>When a plant's leaves turn a yellowish colour due to discolouration. There are a number of reasons this may happen, including nutrient deficiencies, over watering, a lack of chlorophyll or disease.</dd>
+      <br>
+      <dt>Cultivating</dt>
+      <dd>The process of breaking up the soil surface to prepare for planting. It improves soil aeration and promoted better water drainage, giving plants an improved soil environment in which to grow.</dd>
+      <br>
+      <dt>Cutting</dt>
+      <dd>A method of plant propagation that involves taking cuttings from a parent plant and placing into a growing medium in order to produce new plants.</dd>
+      <br>
+      <dt>Dead Head</dt>
+      <dd>Removing dead flowers from the plant so that it continues to produce new ones. Dead heading prevents the plant from going to seed, and will mean that it flowers for longer.</dd>
+    </dl>
+    <p>
+      <a href="https://www.capitalgardens.co.uk/blog/garden-jargon-gardening-terms-made-simple/" title="Gardening terms">Source</a>
+    </p>
+  </section>
 </body>
 </html>
