@@ -1,6 +1,7 @@
 body {
  background-color: rgba(220, 220, 220, 0.2);
  padding: 42px;
+ font-family: 'Gill Sans', sans-serif;
 }
 
 h1 {
@@ -15,11 +16,18 @@ h1 {
 h2 {
  font-size: 220%;
  font-family: 'Snell Roundhand';
+ background-color: #DCDCDC;
+ color: DeepPink; 
+ padding: 22px;
+ display: inline-block;
 }
 
-p {
+h3 {
+ color: DarkBlue;
+}
+
+p, ol, ul {
  color: RebeccaPurple;
- font-family: 'Gill Sans', sans-serif;
 }
 
 #p01 {
@@ -115,6 +123,16 @@ a:hover {
  color: Cyan;
 }
 
+#imglink:hover {
+ background-color: transparent;
+}
+
 ul {
  list-style-type: circle;
+}
+
+.loud {
+  font-size: 220%;
+  color: red;
+  border: 6px solid white;
 }
