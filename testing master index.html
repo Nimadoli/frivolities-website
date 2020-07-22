@@ -68,9 +68,9 @@ Apply the serum, apply the primer. Take your concealer brush with the concealer 
 <hr>
 
 <p>
-<a id="a01" href="#p02">Oh yeah</a>
-<a id="a01" href="sexy-lips-makeup-guide-tumbnail.jpeg" target="_blank">Fuck yeah</a>
-<a id="a01" href="testing 1 index.html" target="_blank">Hell yeah</a>
+<a class="a01" href="#p02">Oh yeah</a>
+<a class="a01" href="sexy-lips-makeup-guide-tumbnail.jpeg" target="_blank">Fuck yeah</a>
+<a class="a01" href="testing 1 index.html" target="_blank">Hell yeah</a>
 </p>
 
 <p class="dialogue">
@@ -178,7 +178,32 @@ Vermilioness
 
 <h3>This is my <span class="loud">first</span> html page</h3>
 <p>I cannot exaggerate enough how <span class="loud">important</span> it is to note this.</p>
-<p class="notes"><b>Note:</b> The class name is case sensitive!</p>
+<p class="notes"><b>Note:</b> The class and id name is case sensitive!</p>
+<p class="notes notes2"><b>Also note:</b> The class and id name must not contain whitespaces (spaces, tabs, etc.), as a space is used to separate two different classes in an tag's attribute field.</p>
+
+<hr>
+
+<h2>Testing javascript on classes</h2>
+
+<pre>
+  Roses are <span class="hide">red,</span>
+  Violets are <span class="hide">blue,</span>
+  Sugar is <span class="hide">sweet,</span>
+  And so are <span class="hide">you.</span>
+</pre>
+
+<p><button onclick="HideFunction()">Less colours</button></p>
+
+<script>
+  function HideFunction() {
+    var x = document.getElementsByClassName("hide");
+    for (var i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+  }
+</script>
+
+<p><button onclick="document.location = 'roses testing.html' ">More roses</button></p>
 
 <hr>
 

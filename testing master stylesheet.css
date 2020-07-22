@@ -54,16 +54,20 @@ blockquote {
  padding: 24px;
 }
 
-p.dialogue {
+.dialogue {
  font-style:oblique;
  color: DarkGrey;
 }
 
-p.notes {
+.notes {
  color: DeepPink;
  font-family: Georgia, serif;
  background-color: LightYellow;
  padding: 20px;
+}
+
+.notes2 {
+  color: #cc0044;
 }
 
 pre {
@@ -90,7 +94,7 @@ a:hover {
  text-decoration: none;
 }
 
-#a01:link, #a01:visited {
+.a01:link, #a01:visited {
   background-color: magenta;
   color: white;
   padding: 15px 25px;
@@ -99,7 +103,7 @@ a:hover {
   display: inline-block;
 }
 
-#a01:hover, #a01:active {
+.a01:hover, #a01:active {
   background-color: red;
 }
 
