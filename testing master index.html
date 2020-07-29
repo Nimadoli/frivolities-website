@@ -68,9 +68,10 @@ Apply the serum, apply the primer. Take your concealer brush with the concealer 
 <hr>
 
 <p>
-<a class="a01" href="#p02">Oh yeah</a>
-<a class="a01" href="sexy-lips-makeup-guide-tumbnail.jpeg" target="_blank">Fuck yeah</a>
-<a class="a01" href="testing 1 index.html" target="_blank">Hell yeah</a>
+  <!-- Fix disappeared text from "Oh yeah" button -->
+  <a class="a01" href="#p02">Oh yeah</a>
+  <a class="a01" href="sexy-lips-makeup-guide-tumbnail.jpeg" target="_blank">Fuck yeah</a>
+  <a class="a01" href="testing 1 index.html" target="_blank">Hell yeah</a>
 </p>
 
 <p class="dialogue">
@@ -192,10 +193,10 @@ Vermilioness
   And so are <span class="hide">you.</span>
 </pre>
 
-<p><button onclick="HideFunction()">Less colours</button></p>
+<p><button onclick="hideFunction()">Less colours</button></p>
 
 <script>
-  function HideFunction() {
+  function hideFunction() {
     var x = document.getElementsByClassName("hide");
     for (var i = 0; i < x.length; i++) {
       x[i].style.display = "none";
@@ -203,7 +204,28 @@ Vermilioness
   }
 </script>
 
-<p><button onclick="document.location = 'roses testing.html' ">More roses</button></p>
+<p><button onclick="document.location = 'testing page01.html' ">Little high, little low</button></p>
+
+<p class="notes"><b>Note:</b> The HTML id attribute is used to specify a unique id for an HTML element (e.g. "p", "a", etc). You cannot have more than one element with the same id in an HTML document. As an example, the "p" element can have the id attributes "p1", "p2", "p3", but these cannot be used on the "a" element.</p>
+
+<p><b>Tip:</b> Make the id attribute a number, to differentiate it from the class attribute.</p>
+
+<a href="A History Of Red/A Brief History of Red - Artsy.html#cadmiumred" target="_blank" title="Not just pink">About Cadmium Red</a>
+
+<div id="fantdiv">
+<h3 class="fanthead">Is this the real world?</h3>
+
+<button onclick="fantasyFunction()">Is it just fantasy?</button>
+
+<script>
+  function fantasyFunction() {
+    document.getElementById("fantasy").innerHTML = "Caught in a landslide... no escape from reality.";
+  }
+</script>
+
+<h3 id="fantasy" class="fanthead">...</h3>
+
+</div>
 
 <hr>
 

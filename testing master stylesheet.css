@@ -23,7 +23,7 @@ h2 {
 }
 
 h3 {
- color: DarkBlue;
+ color: DarkSlateBlue;
 }
 
 p, ol, ul {
@@ -139,4 +139,22 @@ ul {
   font-size: 220%;
   color: red;
   border: 6px solid white;
+}
+
+#fantdiv {
+  background-color: palevioletred;
+  padding: 18px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+iframe {
+  height: 400px;
+  width: 700px;
+  border: none;
+}
+
+.fanthead {
+  color: white;
+  font-family: fantasy;
 }
