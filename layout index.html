@@ -3,22 +3,128 @@
     <head>
         <title>Testing layouts</title>
         <meta charset="UTF-8">
-        <meta name="keywords" content="">
-        <meta name="description" content="">
+        <meta name="keywords" content="roses, testing, layout, pink, flowers, grid, columns">
+        <meta name="description" content="Using roses and gardening as the theme for experiments with layout (header, footer, sections).">
         <meta name="author" content="Nicole Oliveira">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <base target="_blank">
         <style>
+            * {
+                box-sizing: border-box;
+            }
             body {
                 background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRvth4xpV0jRCv_vZSVsDmDsyI1r5VRGBAtlw&usqp=CAU/");
                 padding-left:2%;
                 padding-right:2%;
-                font-family:Arial, Helvetica, sans-serif;
-                color: hotpink;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: mediumvioletred;
+            }
+            header {
+                background-color: snow;
+                padding: 24px;
+                text-align:center;
+                font-size: 240%;
+                color: black;
+            }
+            nav {
+                float: left;
+                width: 20%;
+                height: 200px;
+                background-color: rosybrown;
+                padding: 20px;
+                color: white;
+                font-weight: bold;
+            }
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+            }
+            #rosespics {
+                float: left;
+                width: 70%;
+                height: 200px;
+                background-color: gainsboro;
+                padding: 20px;
+            }
+            #rosespics ul {
+                list-style-type: none;
+                padding: 0;
+                overflow:hidden;
+            }
+            #rosespics li {
+                display: block;
+                float: left;
+                padding: 12px;
+            }
+            .rosesright {
+                height: 100px;
+            }
+            article {
+                background-color: snow;
+                padding: 20px;
+            }
+            section:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            footer {
+                background-color: pink;
+                color: black;
+                padding: 20px;
+                text-align: center;
+            }
+            @media (max-width: 600px) {
+                nav, article {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            #layout {
+                text-align: left;
+                background-color: white;
+                padding: 20px;
             }
         </style>
     </head>
     <body>
-
+        <header>Roses are...</header>
+        <section>
+            <nav>
+                <ul>
+                    <li>Rosa Grandiflora 'About Face'</li>
+                    <li>Rosa 'Bonica'</li>
+                    <li>Rosa floribunda 'Cherry Parfait'</li>
+                </ul>
+            </nav>
+            <div id="rosespics">
+                <ul>
+                    <li><img class="rosesright" src="https://www.thespruce.com/thmb/FCNsdMmWmokTg6l-yxePiAYHSzc=/2304x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Orangeroses-GettyImages-580827975-59480b055f9b58d58ac3d7f0.jpg" alt="About Face rose"></li>
+                    <li><img class="rosesright" src="https://www.thespruce.com/thmb/tME1GcHL1nMoghrs84Z-p5Lsk7E=/1920x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/lightpinkroses-2117411_1920-59480be53df78c537b81ee79.jpg" alt="Bonica rose"></li>
+                    <li><img class="rosesright" src="https://www.thespruce.com/thmb/krNbrK9FtVx37C3dzlkK1RV_3B0=/2398x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Cherryparfaitrose-4876617139_bac25365b1_o-a2c51515d21a4ca3be6f0b4119774642.jpg" alt="Cherry Parfait rose"></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <article>
+                <h1>Gardening Terms</h1>
+                <p>
+                    While veteran gardeners understand gardening jargon, those new to the hobby might feel utterly confused by the terminology.
+                </p>
+            </article>
+        </section>
+        <footer>
+            <h1>Violets are...</h1>
+            <div id="layout">
+                <h2>HTML Layout Techniques</h2>
+                <p>There are four different techniques to create multicolumn layouts. Each technique has its pros and cons:</p>
+                <ul>
+                    <li><a href="layout framework.html" title="Framework example">CSS framework</a></li>
+                    <li><a href="layout float.html" title="Float property example">CSS float property</a></li>
+                    <li><a href="layout flexbox.html" title="Flexbox example">CSS flexbox</a></li>
+                    <li><a href="layout grid.html" title="Grid example">CSS grid</a></li>
+                </ul>
+            </div>
+        </footer>
     </body>
 </html>
