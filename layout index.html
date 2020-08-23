@@ -23,26 +23,30 @@
                 background-color: snow;
                 padding: 24px;
                 text-align:center;
-                font-size: 240%;
+                font-size: 24vw;
                 color: black;
             }
             nav {
                 float: left;
                 width: 20%;
-                height: 200px;
                 background-color: rosybrown;
                 padding: 20px;
                 color: white;
                 font-weight: bold;
+                overflow:auto; /* Creates a scroll bar for excess content. */
             }
             nav ul {
                 list-style-type: none;
                 padding: 0;
             }
+            nav li {
+                padding: 8px;
+                margin-top: 7px;
+                border-bottom: 1px solid white;
+            }
             #rosespics {
                 float: left;
-                width: 70%;
-                height: 200px;
+                width: 80%;
                 background-color: gainsboro;
                 padding: 20px;
             }
@@ -57,7 +61,7 @@
                 padding: 12px;
             }
             .rosesright {
-                height: 100px;
+                height: 160px;
             }
             article {
                 background-color: snow;
@@ -67,6 +71,10 @@
                 content: "";
                 display: table;
                 clear: both;
+            }
+            .darksection {
+                background-color:gainsboro;
+                padding: 20px;
             }
             footer {
                 background-color: pink;
@@ -82,7 +90,7 @@
             }
             #layout {
                 text-align: left;
-                background-color: white;
+                background-color: snow;
                 padding: 20px;
             }
         </style>
@@ -113,8 +121,28 @@
                 </p>
             </article>
         </section>
-        <footer>
+        <section class="darksection">
             <h1>Violets are...</h1>
+            <img src="https://www.afrenchcollection.com/wp-content/uploads/2016/10/violets-in-field.jpg" alt="Violet" style="width: max-width;">
+            <p>If the <mark>max-width</mark> property is set to 100%, the image will scale down if it has to, but never scale up to be larger than its original size.</p>
+        </section>
+        <section>
+            <article>
+                <h1>Resize the page to see a different image</h1>
+                <picture>
+                    <!-- Phone res 1st --><source srcset="https://miro.medium.com/max/3150/0*L_HEc46wbe1Kz_Vm.jpeg" media="(max-width: 800px)">
+                    <!-- Tablet res 2nd--><source srcset="https://www.gardenia.net/storage/app/public/uploads/images/detail/Viola_Celestial_Twilight_Container_9004Optimized.jpg" media="(max-width: 1000px)">
+                    <!-- Full size last. Use the img tag in case the browser is an older version. --><img srcset="https://www.atozflowers.com/wp-content/uploads/2017/11/flowers-1084983_1920-1024x685.jpg" alt="Violet" style="width: auto;">
+                </picture>
+            </article>
+        </section>
+        <section class="darksection">
+            <h2>Note:</h2>
+            <p>
+                Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.
+            </p>
+        </section>
+        <footer>
             <div id="layout">
                 <h2>HTML Layout Techniques</h2>
                 <p>There are four different techniques to create multicolumn layouts. Each technique has its pros and cons:</p>
@@ -122,7 +150,11 @@
                     <li><a href="layout framework.html" title="Framework example">CSS framework</a></li>
                     <li><a href="layout float.html" title="Float property example">CSS float property</a></li>
                     <li><a href="layout flexbox.html" title="Flexbox example">CSS flexbox</a></li>
-                    <li><a href="layout grid.html" title="Grid example">CSS grid</a></li>
+                    <li>CSS grid</li>
+                    <ul>
+                        <li><a href="layout grid.html" title="Basic grid example">Two columns</a></li>
+                        <li><a href="layout grid columns.html" title="Grid columns example">Multiple columns</a></li>
+                    </ul>
                 </ul>
             </div>
         </footer>

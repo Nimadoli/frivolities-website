@@ -38,6 +38,11 @@
                 list-style-type:none;
                 padding:0;
             }
+            li {
+                padding: 8px;
+                margin-top: 7px;
+                border-bottom: 1px solid white;
+            }
             img {
                 width:70%;
                 float:left;
@@ -55,6 +60,18 @@
                 text-align: center;
                 width: 100%;
                 float:left;
+            }
+            /* For tablets */
+            @media only screen and (max-width:800px) {
+                .article {
+                    font-size: 140%;
+                }
+            }
+            /* For mobile phones */
+            @media only screen and (max-width:500px) {
+                .header, .menu, .article, img {
+                    width: 100%;
+                }
             }
         </style>
     </head>
