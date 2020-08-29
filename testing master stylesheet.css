@@ -128,7 +128,7 @@ a:hover {
  color: Cyan;
 }
 
-#imglink:hover {
+.imglink:hover {
  background-color: transparent;
 }
 
@@ -191,8 +191,36 @@ hr {
 aside {
   width: 30%;
   float: right;
-  background-color: palevioletred;
-  color: white;
+  background-color: mistyrose;
+  color: magenta;
   padding: 24px;
   margin-left: 24px;
+}
+
+figure {
+  background-color: lavender;
+  padding: 24px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+table {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+td {
+  width: 33%;
+}
+
+@media (max-width:800px) {
+  .column, .floatnarrow, .floatwide, aside, td {
+    width: 100%;
+  }
+  td {
+    display: block;
+  }
 }

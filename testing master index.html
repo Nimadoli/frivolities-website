@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <title>My First HTML Page + CSS</title>
@@ -89,8 +89,8 @@ Experiencing flutters of the heart that resemble an inexplicable nervous suffoca
 </bdo>
 </p>
 
-<a id="imglink" href="https://www.winkylux.com/products/confetti-ph-lip-balm-confetti">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTRdJMa7xiSqH6LHuxNtdspQsqTGB25EvtYU1l6Niw2Q9aGXHve&usqp=CAU/" alt="MAC Dazzleglass" style="border:0;">
+<a class="imglink" href="https://www.winkylux.com/products/confetti-ph-lip-balm-confetti">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTRdJMa7xiSqH6LHuxNtdspQsqTGB25EvtYU1l6Niw2Q9aGXHve&usqp=CAU/" alt="MAC Dazzleglass" style="width:max-width;border:0;">
 </a>
 
 <p>
@@ -104,7 +104,7 @@ Experiencing flutters of the heart that resemble an inexplicable nervous suffoca
 <hr>
 
 <p>
-<img src="https://i.pinimg.com/originals/b5/a8/5b/b5a85bfa3190ca648af4e94eec831656.jpg" height="308" alt="Sparkly pink lip gloss">
+<img src="https://i.pinimg.com/originals/b5/a8/5b/b5a85bfa3190ca648af4e94eec831656.jpg" width="max-width" alt="Sparkly pink lip gloss">
 </p>
 
 <!-- Random text to exemplify code that needs to be reviewed. -->
@@ -123,7 +123,7 @@ For the drover’s life has pleasures that the townsfolk never know.
   </div>
 
   <div class="floatnarrow">
-    <img src="seal-makeup-animals.jpg" alt="Cute seal wearing makeup" title="Too funny!">
+    <img src="seal-makeup-animals.jpg" alt="Cute seal wearing makeup" title="Too funny!" width="max-width">
   </div>
 </section>
 
@@ -147,8 +147,8 @@ For the drover’s life has pleasures that the townsfolk never know.
     <cite>My Beautiful Lady</cite> painting by Ali Franco.
     </p>
 
-    <a id="imglink" href="https://fineartamerica.com/featured/my-beautiful-lady-ali-franco.html" title="See it at its source">
-    <img src="https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/1/my-beautiful-lady-ali-franco.jpg" style="border:0;" alt="My Beautiful Lady Painting" width="100%">
+    <a class="imglink" href="https://fineartamerica.com/featured/my-beautiful-lady-ali-franco.html" title="See it at its source">
+    <img src="https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/1/my-beautiful-lady-ali-franco.jpg" style="width:100%;border:0;" alt="My Beautiful Lady Painting">
     </a>
 
     <p class="notes">
@@ -197,6 +197,7 @@ For the drover’s life has pleasures that the townsfolk never know.
 <p>I cannot exaggerate enough how <span class="loud">important</span> it is to note this.</p>
 <p class="notes"><b>Note:</b> The class and id name is case sensitive!</p>
 <p class="notes notes2"><b>Also note:</b> The class and id name must not contain whitespaces (spaces, tabs, etc.), as a space is used to separate two different classes in an tag's attribute field.</p>
+<p style="font-size:350%;margin:0;">&#129300</p>
 
 <hr>
 
@@ -254,11 +255,13 @@ For the drover’s life has pleasures that the townsfolk never know.
 <hr>
 
 <section>
-  <div style="padding-top: 12px; padding-bottom: 12px;">
-    <img src="../Toxic Makeup Barbie.jpg" height="350" title="Toxic makeup">
-    <img src="../Images/You're So Fake Barbie.png" height="350" title="Black soul makeup">
-    <img src="Makeup Images/Missing Barbie.jpg" height="350" title="Mssing Barbie">
-  </div>
+  <table>
+    <tr>
+      <td><img src="../Toxic Makeup Barbie.jpg" width="100%" alt="Toxic makeup" title="Toxic makeup"></td>
+      <td><img src="../Images/You're So Fake Barbie.png" width="100%" alt="Black soul makeup" title="Black soul makeup"></td>
+      <td><img src="Makeup Images/Missing Barbie.jpg" width="100%" alt="Missing Barbie" title="Missing Barbie"></td>
+    </tr>  
+  </table>
 
   <p class="notes"><b>Note:</b> It is best practice to use relative file paths (if possible).
     <br>
@@ -320,9 +323,36 @@ For the drover’s life has pleasures that the townsfolk never know.
 
 <hr>
 
+<section>
+  <h2>Intro to some famous makeup artists</h2>
+  <div class="column">
+    <figure>
+      <a class="imglink" href="https://www.patmcgrath.com/" title="Pat McGrath website">
+        <img src="https://res.cloudinary.com/jerrick/image/upload/q_auto,w_720/luewctzs6oew4hglvjh0.jpg" alt="Pat McGrath makeup" style="width:100%;border:0;">
+      </a>   
+      <figcaption>
+        Image: Named the most influential makeup artist in the world by Vogue, Pat McGrath.
+      </figcaption>
+    </figure>
+  </div>
+  <div class="column">
+    <figure>
+      <a class="imglink" href="https://kevynaucoinbeauty.com/" title="Kevyn Aucoin website">
+        <img src="https://res.cloudinary.com/jerrick/image/upload/q_auto,w_720/hba1wcufeakdyl6mgo1v.jpg" alt="Kevyn Aucoin makeup" style="width:100%;border:0;">
+      </a>
+      <figcaption>
+        Image: Kevyn Aucoin's most memorable shoots was the cover shoot with none other than Cindy Crawford in 1986.
+      </figcaption>
+    </figure>
+  </div>
+  <p><a href="https://vocal.media/blush/most-famous-makeup-artists-of-all-time/" title="List of famous makeup artists">More makeup (con)artists</a></p>
+</section>
+
+<hr>
+
 <footer>
   <p>
-  Musings courtesy of Nicole Oliveira
+  Musings courtesy of Nicole Oliveira &#128516
   </p>
 
   <p>
