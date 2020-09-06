@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Subdivision 2 of testing master</title>
+    <link rel="stylesheet" href="testing master stylesheet.css">
+</head>
+<body>
+    <h1>Tell me everything</h1>
+    <!-- The form element requires a link to a document that processes data -->
+    <form action="">
+        <label for="name">What should I call you?</label>
+        <br><br>
+        <input type="text" id="name" name="name">
+        <br><br>
+        <label>What are you after? (Tick as many as you need)</label>
+        <br><br>
+        <input type="checkbox" id="pussy" name="pussy"><label for="pussy">Pussy</label>
+        <input type="checkbox" id="arse" name="arse"><label for="arse">Arse</label>
+        <input type="checkbox" id="dick" name="dick"><label for="dick">Dick</label>
+        <input type="checkbox" id="titties" name="titties"><label for="titties">Titties</label>
+        <input type="checkbox" id="mouth" name="mouth"><label for="mouth">Mouth</label>
+        <input type="checkbox" id="hand" name="hand"><label for="hand">Hand</label>
+        <br><br>
+        <label for="over18">Tick here to confirm you are over the age of 18</label>
+        <input type="checkbox" id="over18" name="over18">
+        <br><br>
+        <label>What are you?</label>
+        <br><br>
+        <!-- Find out what the "value" attribute does -->
+        <input type="radio" id="male" name="male" value="male"><label for="male">Male</label>
+        <br>
+        <input type="radio" id="female" value="female"><label for="female">Female</label>
+        <br>
+        <input type="radio" id="nonbinary" value="nonbinary"><label for="nonbinary">Non-binary</label>
+        <br>
+        <input type="radio" id="prefernot" value="prefernot"><label for="prefernot">Prefer not to say</label>
+        <br><br>
+        <!-- Fix form button -->
+        <input type="button" id="infobutton" name="infobutton" onclick="document.location = 'testing master index.html' ">
+        <br><label for="infobutton">Clicketty click</label>
+        <br><br>
+        <label>What colour do you prefer?</label>
+        <br><br>
+        <input type="radio" id="prefred" name="prefred"><label for="prefred"><img src="" width="20" alt="Sexy red"></label>
+        <input type="radio" id="prefblack" name="prefblack"><label for="prefblack"><img src="" width="20" alt="Powerful black"></label>
+        <input type="radio" id="prefpink" name="prefpink"><label for="prefpink"><img src="" width="20" alt="Cute pink"></label>
+        <br><br>
+        <input type="submit">
+    </form>
+    <p class="notes">Notice that each input field must have a name attribute to be submitted. If the name attribute is omitted, the value of the input field will not be sent at all.</p>
+</body>
+</html>
