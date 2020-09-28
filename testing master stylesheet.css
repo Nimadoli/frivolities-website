@@ -224,3 +224,26 @@ td {
     display: block;
   }
 }
+
+form {
+  padding: 24px;
+  background-color: pink;
+  margin-bottom: 36px;
+}
+
+fieldset {
+  background-color: white;
+  padding: 24px;
+}
+
+legend {
+  background-color: white;
+  border: 1px solid black;
+  padding: 8px;
+  color: deeppink;
+  font-weight: bold;
+}
+
+select {
+  padding: 8px;
+}

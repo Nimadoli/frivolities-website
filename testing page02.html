@@ -9,48 +9,188 @@
 <body>
     <h1>Tell me everything</h1>
     <!-- The form element requires a link to a document that processes data. Fill it in below in the action attribute. -->
-    <form action="form.php" target="resultiframe">
-        <label for="contactname">What should I call you?</label>
-        <br><br>
-        <input type="text" id="contactname" name="contactname" value="My Little Bitch">
-        <br><br>
-        <label for="desires">What are you after? (Tick as many as you need)</label>
-        <br><br>
-        <input type="checkbox" id="pussy" name="pussy"><label for="pussy">Pussy</label>
-        <input type="checkbox" id="arse" name="arse"><label for="arse">Arse</label>
-        <input type="checkbox" id="dick" name="dick"><label for="dick">Dick</label>
-        <input type="checkbox" id="titties" name="titties"><label for="titties">Titties</label>
-        <input type="checkbox" id="mouth" name="mouth"><label for="mouth">Mouth</label>
-        <input type="checkbox" id="hand" name="hand"><label for="hand">Hand</label>
-        <input type="checkbox" id="feet" name="feet"><label for="feet">Feet</label>
-        <br><br>
-        <label for="over18">Tick here to confirm you are over the age of 18</label>
-        <input type="checkbox" id="over18" name="over18">
-        <br><br>
-        <label for="gender">What are you?</label>
-        <br><br>
-        <!-- Find out what the "value" attribute does -->
-        <input type="radio" id="male" name="gender" value="male"><label for="male">Male</label>
-        <br>
-        <input type="radio" id="female" name="gender" value="female"><label for="female">Female</label>
-        <br>
-        <input type="radio" id="nonbinary" name="gender" value="nonbinary"><label for="nonbinary">Non-binary</label>
-        <br>
-        <input type="radio" id="prefernot" name="gender" value="prefernot"><label for="prefernot">Prefer not to say</label>
-        <br><br>
-        <!-- Form button text is defined with the value tag. -->
-        <input type="button" id="infobutton" name="infobutton" onclick="document.location = 'testing master index.html' " value="Clickety Click">
-        <br><br>
-        <label for="prefcolour">What colour do you prefer?</label>
-        <br><br>
-        <input type="radio" id="prefred" name="prefcolour"><label for="prefred"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSy5PMnHNEJ_iRw7DW-Cts1qaRt9RHBiISZUQ&usqp=CAU/" width="80" alt="Sexy red"></label>
-        <input type="radio" id="prefblack" name="prefcolour"><label for="prefblack"><img src="https://i.pinimg.com/236x/32/53/e3/3253e303226bc2acb3000ff8e4968fc3.jpg" width="80" alt="Powerful black"></label>
-        <input type="radio" id="prefpink" name="prefcolour"><label for="prefpink"><img src="https://cf.shopee.sg/file/6d244fb774199b509fde92d069e8c854_tn/" width="80" alt="Cute pink"></label>
-        <br><br>
-        <input type="submit" value="Sssubmisssive">
+    <form action="form.php" target="resultiframe" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Let's get to know each other</legend>
+            <label for="contactname">What should I call you?</label>
+            <br><br>
+            <input type="text" id="contactname" name="contactname"  value="Your Little Bitch">
+            <br><p>...</p><br>
+            <label for="desires">What are you after? (Tick as many as you need)</label>
+            <br><br>
+            <input type="checkbox" id="pussy" name="pussy"><label for="pussy">Pussy</label>
+            <input type="checkbox" id="arse" name="arse"><label for="arse">Arse</label>
+            <input type="checkbox" id="dick" name="dick"><label for="dick">Dick</label>
+            <input type="checkbox" id="titties" name="titties"><label for="titties">Titties</label>
+            <input type="checkbox" id="mouth" name="mouth"><label for="mouth">Mouth</label>
+            <input type="checkbox" id="hand" name="hand"><label for="hand">Hand</label>
+            <input type="checkbox" id="feet" name="feet"><label for="feet">Feet</label>
+            <br><p>...</p><br>
+            <label for="over18">Tick here to confirm you are over the age of 18</label>
+            <input type="checkbox" id="over18" name="over18">
+            <br><p>...</p><br>
+            <label for="age">How young are you?</label>
+            <br><br>
+            <input type="number" id="age" name="age">
+            <br><p>...</p><br>
+            <label for="gender">What are you?</label>
+            <br><br>
+            <!-- Find out what the "value" attribute does -->
+            <input type="radio" id="male" name="gender" value="male"><label for="male">Male</label>
+            <br>
+            <input type="radio" id="female" name="gender" value="female"><label for="female">Female</label>
+            <br>
+            <input type="radio" id="nonbinary" name="gender" value="nonbinary"><label for="nonbinary">Non-binary</label>
+            <br>
+            <input type="radio" id="prefernot" name="gender" value="prefernot"><label for="prefernot">Prefer not to say</label>
+            <br><br>
+            <!-- Form button text is defined with the value tag. -->
+            <input type="button" id="indexbutton" name="indexbutton" onclick="document.location = 'testing master index.html' " value="Clickety Click">
+            <br><p>...</p><br>
+            <label for="prefcolour">What colour do you prefer?</label>
+            <br><br>
+            <input type="radio" id="prefred" name="prefcolour"><label for="prefred"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSy5PMnHNEJ_iRw7DW-Cts1qaRt9RHBiISZUQ&usqp=CAU/" height="120" alt="Sexy red" title="Sexy red"></label>
+            <input type="radio" id="prefblack" name="prefcolour"><label for="prefblack"><img src="https://i.pinimg.com/236x/32/53/e3/3253e303226bc2acb3000ff8e4968fc3.jpg" height="120" alt="Powerful black" title="Powerful black"></label>
+            <input type="radio" id="prefpink" name="prefcolour"><label for="prefpink"><img src="https://cf.shopee.sg/file/6d244fb774199b509fde92d069e8c854_tn/" height="120" alt="Cute pink" title="Cute pink"></label>
+            <br><p>...</p><br>
+            <label for="gift">Choose a sexy gift</label>
+            <br><br>
+            <select id="gift" name="gift" size="2" multiple>
+                <option value="dildo">Dildo</option>
+                <option value="vibrator" selected>Vibrator</option>
+                <option value="butt plug">Butt plug</option>
+                <option value="handcuffs">Handcuffs</option>
+                <option value="lube">Lube</option>
+                <option value="fleshlight">Fleshlight</option>
+            </select>
+            <br><p>...</p><br>
+            <label for="requests">Any special requests?</label>
+            <br><br>
+            <textarea id="requests" name="requests" style="width:100%; height:180px">Go on, you can tell me!</textarea>
+            <br><p>...</p><br>
+            <label for="porntype">What are you into?</label>
+            <br><br>
+            <input list="porntype" name="porntype">
+            <datalist id="porntype">
+                <option value="60FPS">
+                <option value="Amateur">
+                <option value="Anal">
+                <option value="Arab">
+                <option value="Asian">
+                <option value="Babe">
+                <option value="Babysitter">
+                <option value="BBW">
+                <option value="Behind The Scenes">
+                <option value="Big Ass">
+                <option value="Big Dick">
+                <option value="Big Tits">
+                <option value="Bisexual Male">
+                <option value="Blonde">
+                <option value="Blowjob">
+                <option value="Bondage">
+                <option value="Brazilian">
+                <option value="British">
+                <option value="Brunette">
+                <option value="Bukkake">
+                <option value="Cartoon">
+                <option value="Casting">
+                <option value="Celebrity">
+                <option value="Closed Captions">
+                <option value="College">
+                <option value="Compilation">
+                <option value="Cosplay">
+                <option value="Creampie">
+                <option value="Cuckold">
+                <option value="Cumshot">
+                <option value="Czech">
+                <option value="Described Video">
+                <option value="Double Penetration">
+                <option value="Ebony">
+                <option value="Euro">
+                <option value="Exclusive">
+                <option value="Feet">
+                <option value="Female Orgasm">
+                <option value="Fetish">
+                <option value="Fingering">
+                <option value="Fisting">
+                <option value="French">
+                <option value="Funny">
+                <option value="Gangbang">
+                <option value="Gay">
+                <option value="German">
+                <option value="Handjob">
+                <option value="Hardcore">
+                <option value="HD Porn">
+                <option value="Hentai">
+                <option value="Indian">
+                <option value="Interactive">
+                <option value="Interracial">
+                <option value="Italian">
+                <option value="Japanese">
+                <option value="Korean">
+                <option value="Latina">
+                <option value="Lesbian">
+                <option value="Massage">
+                <option value="Masturbation">
+                <option value="Mature">
+                <option value="MILF">
+                <option value="Muscular Men">
+                <option value="Music">
+                <option value="Old/Young">
+                <option value="Orgy">
+                <option value="Parody">
+                <option value="Party">
+                <option value="Pissing">
+                <option value="Pornstar">
+                <option value="POV">
+                <option value="Public">
+                <option value="Pussy Licking">
+                <option value="Reality">
+                <option value="Red Head">
+                <option value="Role Play">
+                <option value="Romantic">
+                <option value="Rough Sex">
+                <option value="Russian">
+                <option value="School">
+                <option value="SFW">
+                <option value="Small Tits">
+                <option value="Smoking">
+                <option value="Solo Female">
+                <option value="Solo Male">
+                <option value="Squirt">
+                <option value="Step Fantasy">
+                <option value="Strap On">
+                <option value="Striptease">
+                <option value="Tattooed Women">
+                <option value="Teen">
+                <option value="Threesome">
+                <option value="Toys">
+                <option value="Transgender">
+                <option value="Verified Couples">
+                <option value="Vintage">
+                <option value="Webcam">
+            </datalist>          
+            <br><p>...</p><br><br>
+            <input type="submit" value="Sssubmisssive">
+        </fieldset>    
     </form>
-    <p class="notes">Notice that each input field must have a name attribute to be submitted. If the name attribute is omitted, the value of the input field will not be sent at all. The name attribute must be the same for all options of an input field, especially when using radio buttons, so that the user cannot select more that one option.</p>
-    <p class="notes notes2">Also note that the default width of an input field is 20 characters.</p>
-    <iframe id="resultiframe"></iframe>
+    <p class="notes"><b>Note:</b> Notice that each input field must have a name attribute to be submitted. If the name attribute is omitted, the value of the input field will not be sent at all. The name attribute must be the same for all options of an input field, especially when using radio buttons, so that the user cannot select more that one option.</p>
+    <p class="notes notes2"><b>Also note:</b> The default width of an input field is 20 characters.</p>
+    <iframe name="resultiframe" title="Form submit result"></iframe>
+    <div style="font-size: 800%; background-color: #262626; padding: 24px; margin-top: 24px; margin-bottom: 24px;">&#129308 &#128162 &#128555</div>
+    <form action="calculation.php" oninput="x.value=parseINt(a.value)+parseInt(b.value)">
+        <fieldset>
+            <legend>Calculation</legend>
+            <label for="xresult">Your hotness scale</p>
+            0
+            <input type="range" id="a" name="a" value="50">
+            100 +
+            <input type="number" id="b" name="b" value="25">
+            =
+            <output id="xresult" name="x" for="a b"></output>
+            <br><br>
+            <input type="submit">
+        </fieldset>
+    </form>
 </body>
 </html>
