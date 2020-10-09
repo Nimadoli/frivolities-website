@@ -2,36 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subdivision 2 of testing master</title>
     <link rel="stylesheet" href="testing master stylesheet.css">
 </head>
 <body>
-    <h1>Tell me everything</h1>
+    <h1>What's your frivolity?</h1>
     <!-- The form element requires a link to a document that processes data. Fill it in below in the action attribute. -->
     <form action="form.php" target="resultiframe" method="post" autocomplete="on">
         <fieldset>
             <legend>Let's get to know each other</legend>
-            <label for="contactname">What should I call you?</label>
+            <label for="contactname">What's your name?</label>
             <br><br>
-            <input type="text" id="contactname" name="contactname"  value="Your Little Bitch">
+            <input type="text" id="contactname" name="contactname"  value="Queen B">
             <br><p>...</p><br>
             <label for="desires">What are you after? (Tick as many as you need)</label>
             <br><br>
-            <input type="checkbox" id="pussy" name="pussy"><label for="pussy">Pussy</label>
-            <input type="checkbox" id="arse" name="arse"><label for="arse">Arse</label>
-            <input type="checkbox" id="dick" name="dick"><label for="dick">Dick</label>
-            <input type="checkbox" id="titties" name="titties"><label for="titties">Titties</label>
-            <input type="checkbox" id="mouth" name="mouth"><label for="mouth">Mouth</label>
-            <input type="checkbox" id="hand" name="hand"><label for="hand">Hand</label>
-            <input type="checkbox" id="feet" name="feet"><label for="feet">Feet</label>
-            <br><p>...</p><br>
-            <label for="over18">Tick here to confirm you are over the age of 18</label>
-            <input type="checkbox" id="over18" name="over18">
+            <input type="checkbox" id="lipstick" name="item1" value="lipstick"><label for="lipstick">Lipstick</label>
+            <input type="checkbox" id="eyeliner" name="item2" value="eyeliner"><label for="eyeliner">Eye Liner</label>
+            <input type="checkbox" id="foundation" name="item3" value="foundation"><label for="foundation">Foundation</label>
+            <input type="checkbox" id="lipgloss" name="item4" value="lipgloss"><label for="lipgloss">Lip Gloss</label>
+            <input type="checkbox" id="eyeshadow" name="item5" value="eyeshadow"><label for="eyeshadow">Eye Shadow</label>
+            <input type="checkbox" id="blush" name="item6" value="blush"><label for="blush">Blush</label>
+            <input type="checkbox" id="lashextensions" name="item7" value="lashextensions"><label for="lashextensions">Lash Extensions </label>
             <br><p>...</p><br>
             <label for="age">How young are you?</label>
             <br><br>
-            <input type="number" id="age" name="age">
+            <input type="number" id="age" name="age" min="0" max="120">
             <br><p>...</p><br>
             <label for="gender">What are you?</label>
             <br><br>
@@ -49,147 +46,80 @@
             <br><p>...</p><br>
             <label for="prefcolour">What colour do you prefer?</label>
             <br><br>
-            <input type="radio" id="prefred" name="prefcolour"><label for="prefred"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSy5PMnHNEJ_iRw7DW-Cts1qaRt9RHBiISZUQ&usqp=CAU/" height="120" alt="Sexy red" title="Sexy red"></label>
-            <input type="radio" id="prefblack" name="prefcolour"><label for="prefblack"><img src="https://i.pinimg.com/236x/32/53/e3/3253e303226bc2acb3000ff8e4968fc3.jpg" height="120" alt="Powerful black" title="Powerful black"></label>
-            <input type="radio" id="prefpink" name="prefcolour"><label for="prefpink"><img src="https://cf.shopee.sg/file/6d244fb774199b509fde92d069e8c854_tn/" height="120" alt="Cute pink" title="Cute pink"></label>
+            <input type="radio" id="prefred" name="prefcolour"><label for="prefred"><img src="https://i.pinimg.com/originals/9d/ce/b6/9dceb66075eddcfda0a72e35d85b547c.jpg" height="120" alt="Sexy red" title="Sexy red"></label>
+            <input type="radio" id="prefpink" name="prefcolour"><label for="prefpink"><img src="https://images.ctfassets.net/wlke2cbybljx/29AhDOc5UaP2dotxJClPrr/0a9d106dd4098b15fa870b79b77b621f/Hall-Of-Fame-model.jpg?w=500&h=500&fit=fill&fm=jpg&bg=" height="120" alt="Cute pink" title="Cute pink"></label>
+            <input type="radio" id="prefpurple" name="prefcolour"><label for="prefpurple"><img src="https://i.pinimg.com/originals/12/b3/0b/12b30bfdb9f83436054b8d3643d2bb4d.jpg" height="120" alt="Powerful purple" title="Powerful purple"></label>
             <br><p>...</p><br>
-            <label for="gift">Choose a sexy gift</label>
+            <label for="gift">Choose a gift</label>
             <br><br>
             <select id="gift" name="gift" size="2" multiple>
-                <option value="dildo">Dildo</option>
-                <option value="vibrator" selected>Vibrator</option>
-                <option value="butt plug">Butt plug</option>
-                <option value="handcuffs">Handcuffs</option>
-                <option value="lube">Lube</option>
-                <option value="fleshlight">Fleshlight</option>
-            </select>
+                <option value="winkylux">Winky Lux CONFETTI PH LIP BALM</option>
+                <option value="ysl" selected>YSL Rouge Volupté Shine</option>
+                <option value="omg">OMG LIP ME UP MATTE LIQUID LIPSTICK & LIP LINER - BAMBI</option>
+              </select>
             <br><p>...</p><br>
-            <label for="requests">Any special requests?</label>
+            <label for="comments">Anything you'd like to add?</label>
             <br><br>
-            <textarea id="requests" name="requests" style="width:100%; height:180px">Go on, you can tell me!</textarea>
+            <textarea id="comments" name="comments" style="width:100%; height:180px">Go on, you can tell me!</textarea>
             <br><p>...</p><br>
-            <label for="porntype">What are you into?</label>
+            <label for="makeupstyle">What's your makeup style?</label>
             <br><br>
-            <input list="porntype" name="porntype">
-            <datalist id="porntype">
-                <option value="60FPS">
-                <option value="Amateur">
-                <option value="Anal">
-                <option value="Arab">
-                <option value="Asian">
-                <option value="Babe">
-                <option value="Babysitter">
-                <option value="BBW">
-                <option value="Behind The Scenes">
-                <option value="Big Ass">
-                <option value="Big Dick">
-                <option value="Big Tits">
-                <option value="Bisexual Male">
-                <option value="Blonde">
-                <option value="Blowjob">
-                <option value="Bondage">
-                <option value="Brazilian">
-                <option value="British">
-                <option value="Brunette">
-                <option value="Bukkake">
-                <option value="Cartoon">
-                <option value="Casting">
+            <input list="makeupstyle" name="makeupstyle">
+            <datalist id="makeupstyle">
+                <option value="Natural">
+                <option value="Evening">
+                <option value="Prom">
+                <option value="Bridal">
+                <option value="Gothic">
+                <option value="Anti Ageing">
                 <option value="Celebrity">
-                <option value="Closed Captions">
-                <option value="College">
-                <option value="Compilation">
-                <option value="Cosplay">
-                <option value="Creampie">
-                <option value="Cuckold">
-                <option value="Cumshot">
-                <option value="Czech">
-                <option value="Described Video">
-                <option value="Double Penetration">
-                <option value="Ebony">
-                <option value="Euro">
-                <option value="Exclusive">
-                <option value="Feet">
-                <option value="Female Orgasm">
-                <option value="Fetish">
-                <option value="Fingering">
-                <option value="Fisting">
-                <option value="French">
-                <option value="Funny">
-                <option value="Gangbang">
-                <option value="Gay">
-                <option value="German">
-                <option value="Handjob">
-                <option value="Hardcore">
-                <option value="HD Porn">
-                <option value="Hentai">
-                <option value="Indian">
-                <option value="Interactive">
-                <option value="Interracial">
-                <option value="Italian">
-                <option value="Japanese">
-                <option value="Korean">
-                <option value="Latina">
-                <option value="Lesbian">
-                <option value="Massage">
-                <option value="Masturbation">
-                <option value="Mature">
-                <option value="MILF">
-                <option value="Muscular Men">
-                <option value="Music">
-                <option value="Old/Young">
-                <option value="Orgy">
-                <option value="Parody">
-                <option value="Party">
-                <option value="Pissing">
-                <option value="Pornstar">
-                <option value="POV">
-                <option value="Public">
-                <option value="Pussy Licking">
-                <option value="Reality">
-                <option value="Red Head">
-                <option value="Role Play">
-                <option value="Romantic">
-                <option value="Rough Sex">
-                <option value="Russian">
-                <option value="School">
-                <option value="SFW">
-                <option value="Small Tits">
-                <option value="Smoking">
-                <option value="Solo Female">
-                <option value="Solo Male">
-                <option value="Squirt">
-                <option value="Step Fantasy">
-                <option value="Strap On">
-                <option value="Striptease">
-                <option value="Tattooed Women">
-                <option value="Teen">
-                <option value="Threesome">
-                <option value="Toys">
-                <option value="Transgender">
-                <option value="Verified Couples">
-                <option value="Vintage">
-                <option value="Webcam">
+                <option value="Airbrush">
+                <option value="Permanent">
+                <option value="Mineral">
             </datalist>          
             <br><p>...</p><br><br>
-            <input type="submit" value="Sssubmisssive">
+            <input type="submit">
         </fieldset>    
     </form>
     <p class="notes"><b>Note:</b> Notice that each input field must have a name attribute to be submitted. If the name attribute is omitted, the value of the input field will not be sent at all. The name attribute must be the same for all options of an input field, especially when using radio buttons, so that the user cannot select more that one option.</p>
     <p class="notes notes2"><b>Also note:</b> The default width of an input field is 20 characters.</p>
     <iframe name="resultiframe" title="Form submit result"></iframe>
-    <div style="font-size: 800%; background-color: #262626; padding: 24px; margin-top: 24px; margin-bottom: 24px;">&#129308 &#128162 &#128555</div>
-    <form action="calculation.php" oninput="x.value=parseINt(a.value)+parseInt(b.value)">
+    <hr>
+    <form action="extras.php">
         <fieldset>
-            <legend>Calculation</legend>
-            <label for="xresult">Your hotness scale</p>
-            0
-            <input type="range" id="a" name="a" value="50">
-            100 +
-            <input type="number" id="b" name="b" value="25">
-            =
-            <output id="xresult" name="x" for="a b"></output>
-            <br><br>
-            <input type="submit">
+            <legend>Extras!</legend>
+                <label for="colourselect">Colour</label> <input type="color" id="colourselect" name="colourselect" value="#FFB3F2">
+                <br><br>
+                <label for="date&time">Date and time (without time zone)</label> <input type="datetime-local" id="date&time" name="date&time">
+                <br><br>
+                <label for="justtime">Just the time <input type="time" id="justtime" name="justtime">
+                <br><br>
+                <label for="whatweek">Week</label> <input type="week" id="whatweek" name="whatweek">
+                <br><br>
+                <label for="birthday">When is your birthday?</label> <input type="date" id="birthday" name="birthday" min="1900-01-01" max="2020-10-09"> <input type="submit">
+                <br><br>
+                <label for="emailaddr">Email</label> <input type="email" id="emailaddr" name="emailaddr"> <input type="submit">
+                <br><br>
+                <label for="uplfile">File</label> <input type="file" id="uplfile" name="uplfile">
+                <br><br>
+                Hidden <input type="hidden">
+                <br><br>
+                Image <input type="image" src="">
+                <br><br>
+                Month <input type="month">
+                <br><br>
+                Password <input type="password" required="yes"> <input type="submit">
+                <br><br>
+                <label for="rangenum">Range:</label> 0 <input type="range" id="rangenum" name="rangenum" min="0" max="100" step="10" value="50"> 100
+                <br><br>
+                Search <input type="search">
+                <br><br>
+                Phone <input type="tel">
+                <br><br>
+                URL <input type="url">
+                <br><br>
+                <input type="reset" value="Start again">
+                <br><br>
         </fieldset>
     </form>
 </body>
