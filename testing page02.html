@@ -9,12 +9,12 @@
 <body>
     <h1>What's your frivolity?</h1>
     <!-- The form element requires a link to a document that processes data. Fill it in below in the action attribute. -->
-    <form action="form.php" target="resultiframe" method="post" autocomplete="on">
+    <form action="form.php" target="resultiframe" method="post" id="mainform" autocomplete="on">
         <fieldset>
             <legend>Let's get to know each other</legend>
             <label for="contactname">What's your name?</label>
             <br><br>
-            <input type="text" id="contactname" name="contactname"  value="Queen B">
+            <input type="text" id="contactname" name="contactname"  placeholder="Queen B" autofocus>
             <br><p>...</p><br>
             <label for="desires">What are you after? (Tick as many as you need)</label>
             <br><br>
@@ -60,7 +60,7 @@
             <br><p>...</p><br>
             <label for="comments">Anything you'd like to add?</label>
             <br><br>
-            <textarea id="comments" name="comments" style="width:100%; height:180px">Go on, you can tell me!</textarea>
+            <textarea id="comments" name="comments" style="width:100%; height:180px" placeholder="Go on, you can tell me!"></textarea>
             <br><p>...</p><br>
             <label for="makeupstyle">What's your makeup style?</label>
             <br><br>
@@ -85,7 +85,7 @@
     <p class="notes notes2"><b>Also note:</b> The default width of an input field is 20 characters.</p>
     <iframe name="resultiframe" title="Form submit result"></iframe>
     <hr>
-    <form action="extras.php">
+    <form action="extras.php" autocomplete="on">
         <fieldset>
             <legend>Extras!</legend>
                 <label for="colourselect">Colour</label> <input type="color" id="colourselect" name="colourselect" value="#FFB3F2">
@@ -96,31 +96,35 @@
                 <br><br>
                 <label for="whatweek">Week</label> <input type="week" id="whatweek" name="whatweek">
                 <br><br>
-                <label for="birthday">When is your birthday?</label> <input type="date" id="birthday" name="birthday" min="1900-01-01" max="2020-10-09"> <input type="submit">
+                <label for="birthday">When is your birthday?</label> <input type="date" id="birthday" name="birthday" min="1900-01-01" max="2020-10-09">
                 <br><br>
-                <label for="emailaddr">Email</label> <input type="email" id="emailaddr" name="emailaddr"> <input type="submit">
+                <label for="emailaddr">Email</label> <input type="email" id="emailaddr" name="emailaddr" form="mainform" autocomplete="off">
                 <br><br>
-                <label for="uplfile">File</label> <input type="file" id="uplfile" name="uplfile">
+                <label for="uplfile">File</label> <input type="file" id="uplfile" name="uplfile" multiple>
                 <br><br>
-                Hidden <input type="hidden">
+                Hidden <span class="info" title="Find out more about this input type!">&#10068</span> <input type="hidden">
                 <br><br>
-                Image <input type="image" src="">
+                <label for="imgsubmit">Click your favourite colour to submit:</label>
                 <br><br>
-                Month <input type="month">
+                <input type="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQZ5Lx9TPBqKFhIhPLN6M62OJaOc1aNm3iPHw&usqp=CAU/" id="imgsubmit" name="imgsubmit" alt="Pick one of the four" width="50" height="50">
+                <br>
+                <p class="notes"><b>Note:</b>> The input type="image" sends the X and Y coordinates of the click that activated the image button.</p>
+                <label for="inputmonth">Month</label> <input type="month" id="inputmonth" name="inputmonth">
                 <br><br>
-                Password <input type="password" required="yes"> <input type="submit">
+                <label for="pass">Password</label> <input type="password" required="yes" id="pass" name="pass" size="12" value="123456">
                 <br><br>
                 <label for="rangenum">Range:</label> 0 <input type="range" id="rangenum" name="rangenum" min="0" max="100" step="10" value="50"> 100
                 <br><br>
-                Search <input type="search">
+                <label for="searchquery">Search</label> <input type="search" id="searchquery" name="searchquery" size="60" placeholder="Input an invalid number in the next field and click submit">
                 <br><br>
-                Phone <input type="tel">
+                <label for="mobile">Mobile number</label> <input type="text" value="(+61)" size="5" disabled> <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" size="10" maxlength="10" title="Must be an Australian mobile number, starting in 04">
                 <br><br>
-                URL <input type="url">
+                <label for="supplyurl">URL</label> <input type="url" id="supplyurl" name="supplyurl" disabled value="facialfrivolities.com">
                 <br><br>
-                <input type="reset" value="Start again">
+                <input type="submit"> <input type="reset" value="Start again">
                 <br><br>
         </fieldset>
     </form>
+    <p class="notes"><b>Note:</b> A read-only input field cannot be modified (however, a user can tab to it, highlight it, and copy the text from it).<br>The value of a read-only input field will be sent when submitting the form!<br>The value of a disabled input field however will not be sent when submitting the form.</p>
 </body>
 </html>
