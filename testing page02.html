@@ -8,6 +8,11 @@
 </head>
 <body>
     <h1>What's your frivolity?</h1>
+        <ul class="shortcuts">
+            <li class="shortcuts">Shortcuts:</li>
+            <li class="shortcuts"><a href="#mainform" title="Jump to main form">Main form</a></li>
+            <li class="shortcuts"><a href="#extrasform" title="Jump to extras form">Extras form</a></li>
+        </ul>
     <!-- The form element requires a link to a document that processes data. Fill it in below in the action attribute. -->
     <form action="form.php" target="resultiframe" method="post" id="mainform" autocomplete="on">
         <fieldset>
@@ -78,14 +83,14 @@
                 <option value="Mineral">
             </datalist>          
             <br><p>...</p><br><br>
-            <input type="submit">
+            <input type="submit"> <input type="submit" value="Submit as multipart/form-data" formenctype="multipart/form-data">
         </fieldset>    
     </form>
     <p class="notes"><b>Note:</b> Notice that each input field must have a name attribute to be submitted. If the name attribute is omitted, the value of the input field will not be sent at all. The name attribute must be the same for all options of an input field, especially when using radio buttons, so that the user cannot select more that one option.</p>
     <p class="notes notes2"><b>Also note:</b> The default width of an input field is 20 characters.</p>
     <iframe name="resultiframe" title="Form submit result"></iframe>
     <hr>
-    <form action="extras.php" autocomplete="on">
+    <form action="extras.php" autocomplete="on" method="post" id="extrasform">
         <fieldset>
             <legend>Extras!</legend>
                 <label for="colourselect">Colour</label> <input type="color" id="colourselect" name="colourselect" value="#FFB3F2">
@@ -120,8 +125,8 @@
                 <label for="mobile">Mobile number</label> <input type="text" value="(+61)" size="5" disabled> <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" size="10" maxlength="10" title="Must be an Australian mobile number, starting in 04">
                 <br><br>
                 <label for="supplyurl">URL</label> <input type="url" id="supplyurl" name="supplyurl" disabled value="facialfrivolities.com">
-                <br><br>
-                <input type="submit"> <input type="reset" value="Start again">
+                <br><br><br>
+                <input type="submit"> <input type="submit" formaction="extras_admin.php" value="Submit as admin"> <input type="submit" formmethod="get" value="Submit and bookmark"> <input type="submit" formtarget="_blank" value="Submit and open in new window"> <input type="reset" value="Start again">
                 <br><br>
         </fieldset>
     </form>
