@@ -14,7 +14,7 @@
             <li class="shortcuts"><a href="#extrasform" title="Jump to extras form">Extras form</a></li>
         </ul>
     <!-- The form element requires a link to a document that processes data. Fill it in below in the action attribute. -->
-    <form action="form.php" target="resultiframe" method="post" id="mainform" autocomplete="on">
+    <form action="form.php" target="resultiframe" method="post" id="mainform" autocomplete="on" novalidate>
         <fieldset>
             <legend>Let's get to know each other</legend>
             <label for="contactname">What's your name?</label>
@@ -83,12 +83,12 @@
                 <option value="Mineral">
             </datalist>          
             <br><p>...</p><br><br>
-            <input type="submit"> <input type="submit" value="Submit as multipart/form-data" formenctype="multipart/form-data">
+            <input type="submit" onclick="document.location = '#resultiframe' "> <input type="submit" value="Submit as multipart/form-data" formenctype="multipart/form-data">
         </fieldset>    
     </form>
     <p class="notes"><b>Note:</b> Notice that each input field must have a name attribute to be submitted. If the name attribute is omitted, the value of the input field will not be sent at all. The name attribute must be the same for all options of an input field, especially when using radio buttons, so that the user cannot select more that one option.</p>
     <p class="notes notes2"><b>Also note:</b> The default width of an input field is 20 characters.</p>
-    <iframe name="resultiframe" title="Form submit result"></iframe>
+    <iframe id="resultiframe" name="resultiframe" title="Form submit result"></iframe>
     <hr>
     <form action="extras.php" autocomplete="on" method="post" id="extrasform">
         <fieldset>
@@ -116,7 +116,7 @@
                 <p class="notes"><b>Note:</b>> The input type="image" sends the X and Y coordinates of the click that activated the image button.</p>
                 <label for="inputmonth">Month</label> <input type="month" id="inputmonth" name="inputmonth">
                 <br><br>
-                <label for="pass">Password</label> <input type="password" required="yes" id="pass" name="pass" size="12" value="123456">
+                <label for="pass">Password</label> <input type="password" required="yes" id="pass" name="pass" size="12" value="123456" formnovalidate="formnovalidate">
                 <br><br>
                 <label for="rangenum">Range:</label> 0 <input type="range" id="rangenum" name="rangenum" min="0" max="100" step="10" value="50"> 100
                 <br><br>

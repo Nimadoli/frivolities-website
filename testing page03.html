@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playing with the canvas element</title>
+    <link rel="stylesheet" href="testing master stylesheet.css">
+</head>
+<body>
+    <h1>A blank canvas...</h1>
+    <canvas id="lipstickcanvas" width="400" height="300" style="border: 1px solid magenta">
+        Your browser does not support the HTML canvas tag.
+    </canvas>
+    <script>
+        var c = document.getElementById("lipstickcanvas");
+        var ctx = c.getContext("2d");
+        ctx.moveTo(0, 0);
+        ctx.lineTo(400, 300);
+        ctx.stroke();
+    </script>
+    <script>
+        var c = document.getElementById("lipstickcanvas");
+        var ctx = c.getContext("2d");
+        ctx.moveTo(0, 300);
+        ctx.lineTo(400, 0);
+        ctx.stroke();
+    </script>
+    <canvas id="lipglosscanvas" width="400" height="300" style="border: 1px solid magenta;">
+        Another canvas tag that your browser does not support.
+    </canvas>
+    <script>
+        var c = document.getElementById("lipglosscanvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(200, 150, 50, 0, 2 * Math.PI);
+        ctx.fill();
+    </script>
+    <script>
+        var c = document.getElementById("lipglosscanvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(200, 150, 130, 0, 2 * Math.PI);
+        ctx.stroke();
+    </script>
+    <canvas id="eyeshadowcanvas" width="400" height="300" style="border: 1px solid magenta;">
+        You need to update your browser, mate.
+    </canvas>
+    <script>
+        var c = document.getElementById("eyeshadowcanvas");
+        var ctx = c.getContext("2d");
+        ctx.font = "36px Palatino";
+        ctx.fillText("Makeup is life", 24, 52)
+    </script>
+    <script>
+        var c = document.getElementById("eyeshadowcanvas");
+        var ctx = c.getContext("2d");
+        ctx.font = "26px Palatino";
+        ctx.strokeText("...especially if you're shallow", 50, 278);
+    </script>
+    <canvas id="eyelinercanvas" width="400" height="300" style="border: 1px solid magenta;">
+    </canvas>
+    <script>
+        var c = document.getElementById("eyelinercanvas");
+        var ctx = c.getContext("2d");
+        var grd = ctx.createLinearGradient(0, 0, 400, 0);
+        grd.addColorStop(0, "indigo");
+        grd.addColorStop(1, "gold");
+        ctx.fillStyle = grd;
+        ctx.fillRect(15, 15, 370, 120);
+    </script>
+    <script>
+        var c = document.getElementById("eyelinercanvas");
+        var ctx = c.getContext("2d");
+        ctx.moveTo(0, 150);
+        ctx.lineTo(400, 150);
+        ctx.stroke();
+    </script>
+    <script>
+        var c = document.getElementById("eyelinercanvas");
+        var ctx = c.getContext("2d");
+        var grd = ctx.createRadialGradient(250, 280, 0, 100, 100, 260);
+        grd.addColorStop(0, "magenta");
+        grd.addColorStop(1, "lime");
+        ctx.fillStyle = grd;
+        ctx.fillRect(15, 165, 370, 120);
+    </script>
+    <h3>A not-so-magic trick</h3>
+    <img alt="YSL lips" src="Alena_attitude_lips380x280.jpg" width="380" height="280">
+    <p>
+    <button onclick="magiccanvas()">What will happen?</button>
+    </p>
+    <canvas id="magiccanvas" width="400" height="300" style="border: 1px solid magenta;"></canvas>
+</body>
+</html>
