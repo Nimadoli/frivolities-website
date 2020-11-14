@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playing with the canvas element</title>
-    <link rel="stylesheet" href="testing master stylesheet.css">
+    <link rel="stylesheet" href="testing_master_stylesheet.css">
 </head>
 <body>
     <h1>A blank canvas...</h1>
@@ -85,10 +85,18 @@
         ctx.fillRect(15, 165, 370, 120);
     </script>
     <h3>A not-so-magic trick</h3>
-    <img alt="YSL lips" src="Alena_attitude_lips380x280.jpg" width="380" height="280">
+    <img id="ysllips" alt="YSL lips" src="Alena_attitude_lips380x280.jpg" width="380" height="280">
     <p>
     <button onclick="magiccanvas()">What will happen?</button>
     </p>
     <canvas id="magiccanvas" width="400" height="300" style="border: 1px solid magenta;"></canvas>
+    <script>
+        function magiccanvas() {
+            var c = document.getElementById("magiccanvas");
+            var ctx = c.getContext("2d");
+            var img = document.getElementById("ysllips");
+            ctx.drawImage(img, 10, 10);
+        }
+    </script>
 </body>
 </html>
