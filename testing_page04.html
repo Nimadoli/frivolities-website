@@ -4,10 +4,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="testing_master_stylesheet.css">
-        <title>Playing with SVG graphics</title>
+        <title>Playing with multimedia</title>
     </head>
     <body>
-        <h1>Playing with SVG graphics</h1>
+        <h1>Playing with multimedia</h1>
+        <h2>SVG graphics</h2>
+        <br>
         <svg width="400" height="300" style="border:1px solid black;">
             <circle cx="200" cy="150" r="120" stroke="magenta" stroke-width="46" fill="gold" />
         </svg>
@@ -22,13 +24,65 @@
         </svg>
         <svg width="400" height="300" style="border:1px solid black;">
             <defs>
-                <linearGradient id="grad1" xl="0%" yl="0%" x2="100%" y2="0%">
-                    <stop offset="0%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#FA8072;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#6A5ACD;stop-opacity:1" />
                 </linearGradient>
             </defs>
             <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
-            <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">NO</text>
+            <text fill="#ffffff" font-size="52" font-family="Impact" x="50" y="90">OMG</text>
             You need to update your browser in order to view SVG graphics.
         </svg>
+        <p>
+            <h2>Video content</h2>
+            <br>
+            <video height="400" controls>
+              <source src="Snapchat-1720680841.mp4">
+              Your browser does not support the video tag.
+            </video>
+        </p>
+        <div style="text-align:center;border:1px solid black;padding:24px;">
+            <button onclick="playPause()">play/Pause</button>
+            <button onclick="makeBig()">big</button>
+            <button onclick="makeSmall()">small</button>
+            <button onclick="makeNormal()">normal</button>
+            <br>
+            <br>
+            <video id="mouthvideo" width="200">
+                <source src="Snapchat-1720680841.mp4" type="video/mp4">
+            </video>
+        </div>
+        <script>
+            var myVideo = document.getElementById("mouthvideo");
+            function playPause() {
+            if (myVideo.paused)
+                myVideo.play();
+            else
+                myVideo.pause();
+            }
+            function makeBig() {
+            myVideo.width = 400;
+            }
+            function makeSmall() {
+            myVideo.width = 100;
+            }
+            function makeNormal() {
+            myVideo.width = 200;
+            }
+        </script>
+        <h2>Audio content</h2>
+        <br>
+        <audio controls style="background-color:magenta; padding:12px;">
+            <source src="Just_A_Kiss_-_Mishon.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <br>
+        <h2>The embed element</h2>
+        <br>
+        <embed src="testing_master_stylesheet.css" style="border:1px solid black;background-color:white;padding:24px;width:600px;height:300px;" allow="autoplay;">
+        <br>
+        <h2>YouTube videos</h2>
+        <br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/W78qhYYPKds?autoplay=1&mute=1&controls=1" frameborder="0"></iframe>
     </body>
 </html>
