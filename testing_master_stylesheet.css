@@ -275,3 +275,24 @@ li.shortcuts a {
 li.shortcuts a:hover {
     color: white;
 }
+
+#dragdiv {
+  border:1px solid black;
+  width:420px;
+  height:300px;
+}
+
+#chesswhite, #chessblack {
+  width:120px;
+  height:120px;
+  padding:20px;
+  float:left;
+}
+
+#chesswhite {
+  border:1px solid black;
+}
+
+#chessblack {
+  background-color:black;
+}
