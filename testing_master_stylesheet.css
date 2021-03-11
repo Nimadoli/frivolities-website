@@ -276,7 +276,7 @@ li.shortcuts a:hover {
     color: white;
 }
 
-#dragdiv {
+.dragdiv {
   border:1px solid black;
   width:420px;
   height:300px;

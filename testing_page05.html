@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="testing_master_stylesheet.css">
-    <title>Geolocation API</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <title>Extra Features</title>
 </head>
 <body>
-    <h1>Testing the geolocation API</h1>
+    <h1>Testing extra features</h1>
+    <h2>Location API</h2>
     <p>Let's get your location!</p>
     <button onclick="getLocation()">Approve</button>
     <p>It might take a minute for your coordinates to show up, just hold on.</p>
-    <p id="locate"></p>
+    <div id="locate" style="border:1px solid black; padding:24px;"></div>
     <script>
         var x = document.getElementById("locate");
         function getLocation() {
@@ -42,10 +45,10 @@
             }
         }
     </script>
-    <hr>
     <p>Location viewed on Google Maps</p>
     <button onclick="getMap()">Let's go</button>
-    <p id="gmap"></p>
+    <br><br>
+    <div id="gmap" style="border:1px solid black;padding:24px;"></div>
     <script>
         var x = document.getElementById("gmap");
         function getMap() {
@@ -62,5 +65,23 @@
             document.getElementById("gmap").innerHTML = "<img src='"+img_url+"'>";
         }
     </script>
+    <br>
+    <h2>Testing HTML Web Storage</h2>
+    <p>Let's count how many times a button can be clicked.</p>
+    <script>
+        function clickCounter() {
+            if (typeof(Storage) !== "undefined") {
+                if (localStorage.clickcount) {
+                    localStorage.clickcount = Number(localStorage.clickcount)+1;
+                } else {
+                    localStorage.clickcount = 1;
+                }
+            document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+            } else {
+                document.getElementById("result")
+            }
+        }
+    </script>
+    <div id="result" style="border:1px solid black;padding:24px;"></div>
 </body>
 </html>
