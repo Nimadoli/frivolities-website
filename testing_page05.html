@@ -67,7 +67,7 @@
     </script>
     <br>
     <h2>Testing HTML Web Storage</h2>
-    <p>Let's count how many times a button can be clicked.</p>
+    <p>Count how many times a button can be clicked.</p>
     <script>
         function clickCounter() {
             if (typeof(Storage) !== "undefined") {
@@ -78,10 +78,14 @@
                 }
             document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
             } else {
-                document.getElementById("result")
+                document.getElementById("result").innerHTML = "Computer says no.";
             }
         }
     </script>
-    <div id="result" style="border:1px solid black;padding:24px;"></div>
+    <p>
+        <button onclick="clickCounter()" type="button">Let's start!</button>
+        <div id="result" style="border:1px solid black;padding:24px;">How many clicks so far?</div>
+    </p>
+    <p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
 </body>
 </html>
