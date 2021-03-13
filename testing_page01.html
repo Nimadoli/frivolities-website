@@ -1,92 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale-1.0">
-        <title>Subdivision 1 of testing master</title>
-        <link rel="stylesheet" href="testing master stylesheet.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <h3>Anywhere the wind blows...</h3>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Extra Features</title>
+    <link rel="stylesheet" href="testing_master_stylesheet.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h3>Anywhere the wind blows...</h3>
+    <p>
+        <iframe src="../hello-world/sunset index.html" title="Sunset" height="400" width="700" style="border: none;"></iframe>
+    </p>
+    <h2>Doesn't really matter to me</h2>
+    <hr>
+    <p>
+        Fill in the gap... <a href="https://www.intheblack.com/articles/2016/07/01/fintechs-small-business-lenders-fill-a-market-gap/" title="Fill in the gap" target="_blankiframe">here</a>
+    </p>
+    <iframe name="_blankiframe" width="500" height="400" src="https://www.intheblack.com/-/media/intheblack/allimages/magazine-2016/07-july/gap-feature.jpg?rev=9b6b7374d1084a04843b8d8c23b308fa/"></iframe>
+    <p>
+        <button onclick="document.getElementById('time').innerHTML = Date()">Lost in time?</button>
+        <div id="time"></div>
+    </p>
+    <p>
+        <button onclick="lostFunction()">Still lost?</button>
+    </p>
+    <p id="lost">Miami, Amsterdam, Tokyo, Spain, lost...</p>
+    <script>
+        function lostFunction() {
+            document.getElementById("lost").style.fontWeight = "bold";
+            document.getElementById("lost").style.fontSize = "260%";
+            document.getElementById("lost").style.backgroundColor = "#FFEFD5";
+        }
+    </script>
+    <noscript>You need to get JavaScript support on you browser!</noscript>
+    <button onclick="miamiFunction()">In the heat of it all...</button>
+    <p>
+        <div id="miami" style="width:500px;height:300px;border:1px solid black;"></div>
+    </p>
+    <script>
+        function miamiFunction() {
+            document.getElementById("miami").style.backgroundImage = "url('https://edmidentity.com/wp-content/uploads/2019/02/HNKC_180324_GETLOST_Miami2018-0633.jpg')";
+            document.getElementById("miami").style.backgroundSize = "cover";
+        }
+    </script>
+    <hr>
+    <section>
+        <h3>Red light, green light, red light, green light</h3>
+        <img id="lights" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/237/large-green-circle_1f7e2.png" width="100" height="100">
         <p>
-            <iframe src="../hello-world/sunset index.html" title="Sunset" height="400" width="700" style="border: none;"></iframe>
+            <button onclick="redlightFunction()">Red light</button>
+            <button onclick="greenlightFunction()">Green light</button>
         </p>
-        <h2>Doesn't really matter to me</h2>
-        <hr>
-        <p>
-            Fill in the gap... <a href="https://www.intheblack.com/articles/2016/07/01/fintechs-small-business-lenders-fill-a-market-gap/" title="Fill in the gap" target="_blankiframe">here</a>
-        </p>
-        <iframe name="_blankiframe" width="500" height="400" src="https://www.intheblack.com/-/media/intheblack/allimages/magazine-2016/07-july/gap-feature.jpg?rev=9b6b7374d1084a04843b8d8c23b308fa/"></iframe>
-        <p>
-            <button onclick="document.getElementById('time').innerHTML = Date()">Lost in time?</button>
-            <div id="time"></div>
-        </p>
-        <p>
-            <button onclick="lostFunction()">Still lost?</button>
-        </p>
-        <p id="lost">Miami, Amsterdam, Tokyo, Spain, lost...</p>
-        <script>
-            function lostFunction() {
-              document.getElementById("lost").style.fontWeight = "bold";
-              document.getElementById("lost").style.fontSize = "260%";
-              document.getElementById("lost").style.backgroundColor = "#FFEFD5";
-            }
-        </script>
-        <noscript>You need to get JavaScript support on you browser!</noscript>
-        <button onclick="miamiFunction()">In the heat of it all...</button>
-        <p>
-            <div id="miami" style="width:500px;height:300px;border:1px solid black;"></div>
-        </p>
-        <script>
-            function miamiFunction() {
-                document.getElementById("miami").style.backgroundImage = "url('https://edmidentity.com/wp-content/uploads/2019/02/HNKC_180324_GETLOST_Miami2018-0633.jpg')";
-                document.getElementById("miami").style.backgroundSize = "cover";
-            }
-        </script>
-        <hr>
-        <section>
-            <h3>Red light, green light, red light, green light</h3>
-            <img id="lights" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/237/large-green-circle_1f7e2.png" width="100" height="100">
-            <p>
-                <button onclick="redlightFunction()">Red light</button>
-                <button onclick="greenlightFunction()">Green light</button>
-            </p>
-            <!-- Fix image links
-                <script>
-                    function redlightFunction() {
-                        document.getElementById("lights").src = "url('https://www.pinclipart.com/picdir/middle/121-1215420_glossy-home-icon-button-clip-art-at-red.png')";
-                    }
-                    function greenlightFunction() {
-                        document.getElementById("lights").src = "url('https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/blue-circle.png')";
-                    }
-                </script>
-            -->
-        </section>
-        <hr>
-        <section>
-            <h2>How to close HTML elements for XHTML</h2>
-            <pre>
+        <!-- Fix image links
+            <script>
+                function redlightFunction() {
+                    document.getElementById("lights").src = "url('https://www.pinclipart.com/picdir/middle/121-1215420_glossy-home-icon-button-clip-art-at-red.png')";
+                }
+                function greenlightFunction() {
+                    document.getElementById("lights").src = "url('https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/blue-circle.png')";
+                }
+            </script>
+        -->
+    </section>
+    <hr>
+    <section>
+        <h2>How to close HTML elements for XHTML</h2>
+        <pre>
 A break: &lt;br />
 A horizontal rule: &lt;hr />
 An image: &lt;img src="https://pagedesignpro.com/wp-content/uploads/2018/06/laptop-broken-screen.png" height="300" alt="Broken computer" />
-            </pre>
-        </section>
-        <footer>
-            <p>Musings courtesy of Nicole Oliveira &#128151</p>
-            <p>Contact:</p>
-            <p>
-                <address>
-                    15/38 Alt Street
-                    <br>
-                    Ashfield
-                    <br>
-                    NSW 2131
-                    <br>
-                    nicoleoliveira@live.co.uk
-                </address>
-            </p>
-        </footer>
-    </body>
+        </pre>
+    </section>
+    <section>
+       <h2>Counting down the clicks...</h2> 
+       <script>
+           function clickCounter() {
+               if (typeof(Storage) !== "undefined") {
+                    if (sessionStorage.clickcount) {
+                       sessionStorage.clickcount = Number(sessionStorage.clickcount)-1;
+                    } else {
+                            sessionStorage.clickcount = 1824;
+                    }
+                    document.getElementById("result").innerHTML = "..." + sessionStorage.clickcount + " day(s) to go." 
+                } else {
+                    document.getElementById("result").innerHTML = "Computer says no.";
+                }
+            }
+       </script>
+       <br>
+       <button onclick="clickCounter()" type="button">'Till I will find you there...</button>
+       <br><br>
+       <div id="result" style="border:1px solid black;padding:24px;"></div>
+    </section>
+    <hr>
+    <footer>
+        <p>Musings courtesy of Nicole Oliveira &#128151</p>
+        <p>Contact:</p>
+        <p>
+            <address>
+                15/38 Alt Street
+                <br>
+                Ashfield
+                <br>
+                NSW 2131
+                <br>
+                nicoleoliveira@live.co.uk
+            </address>
+        </p>
+    </footer>
+</body>
 </html>
