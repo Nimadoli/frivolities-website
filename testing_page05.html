@@ -87,5 +87,37 @@
         <div id="result" style="border:1px solid black;padding:24px;">How many clicks so far?</div>
     </p>
     <p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
+    <h2>Web Workers</h2>
+    <p>I am counting <output id="counting"></output> dead muthafuckers.</p>
+    <button onclick="startWorker()">Let the bodies hit the floor</button>
+    <button onclick="stopWorker()">Enough now</button>
+    <p class="note">Only works on Internet Explorer 10 onward.</p>
+    <script>
+        var w;
+	function startWorker() {
+	    if(typeof(Worker) !== "undefined") {
+	        if(typeof(w) == "undefined") {
+	            w = new Worker("demo_workers.js");
+		}
+	    	w.onmesage = function(event) {
+		    document.getElementById("counting").innerHTML = event.data;
+		};
+	    } else {
+		document.getElementById("counting").innerHTML = "Computer says... no.";
+		}
+	    }
+        function stopWorker() {
+	    w.terminate();
+	    w = undefined;
+	}
+    </script>
+    <p class="note"><b>Note:</b> Normally web workers are not used for such simple scripts, but for more CPU intensive tasks.</p>
+    <p class="note2"><b>Also note:</b> Since web workers are in external files, they do not have access to the following JavaScript objects:
+	<ul>
+	    <li>the window object</li>
+	    <li>the document object</li>
+	    <li>the parent object</li>
+	</ul>
+    </p>
 </body>
 </html>
