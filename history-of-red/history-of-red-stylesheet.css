@@ -32,9 +32,7 @@ ul {
     border-bottom: 1px solid black;
 }
 
-li {
-    float: left;
-}
+li {float: left;}
 
 li a {
     text-decoration: none;
