@@ -136,6 +136,29 @@ ul {
  list-style-type: circle;
 }
 
+nav {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+ul.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li.nav {
+  float:left;
+  font-size: 120%;
+}
+
+li.nav a {
+  display:block;
+  text-align: center;
+  padding:16px;
+}
+
 .loud {
   font-size: 220%;
   color: red;
