@@ -51,5 +51,24 @@
         </tfoot>
     </table>
     <p class="notes"><b>Note:</b> Browsers can use the thead, tbody and tfooter elements to enable scrolling of the table body independently of the header and footer. Also, when printing a large table that spans multiple pages, these elements can enable the table header and footer to be printed at the top and bottom of each page.</p>
+    <section>
+        <h3>Red light, green light, red light, green light</h3>
+        <img id="lights" src="glossy-icon-button-red.png" style="width:100px;height:100px;">
+        <p>
+            <button type="button" onclick="lightcolor(0)">Green light</button>
+            <button type="button" onclick="lightcolor(1)">Red light</button>
+        </p>
+        <script>
+            function lightcolor(sw) {
+                var pic;
+                if (sw == 0) {
+                    pic = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/237/large-green-circle_1f7e2.png";
+                } else {
+                    pic = "glossy-icon-button-red.png";
+                }
+                document.getElementById('lights').src = pic;
+            }    
+        </script>
+    </section>
 </body>
 </html>
