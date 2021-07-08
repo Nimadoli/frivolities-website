@@ -200,7 +200,7 @@ li.nav a {
   padding-right: 24px;
 }
 
-section:after {
+section::after {
   content: "";
   display: table;
   clear: both;
