@@ -70,8 +70,11 @@
                 color: black;
                 padding: 10px;
                 text-align: center;
-                width: 100%;
-                float:left;
+            }
+            @media only screen and (max-width: 800px) {
+                [class*="col-"] {
+                    width: 100%;
+                }    
             }
         </style>
     </head>
@@ -97,7 +100,7 @@
                 </p>
             </div>
         </div>
-        <div class="footer">
+        <div class="col-6 footer">
             <h1>Violets are...</h1>
         </div>
     </body>
