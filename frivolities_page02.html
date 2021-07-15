@@ -15,28 +15,29 @@
             <li class="shortcuts"><a href="#mainform" title="Jump to main form">Main form</a></li>
             <li class="shortcuts"><a href="#extrasform" title="Jump to extras form">Extras form</a></li>
         </ul>
-    <!-- The form element requires a link to a document that processes data. Fill it in below in the action attribute. -->
+    <!-- The form element requires a link to a document that processes data. Fill it in below in the action attribute once made. -->
     <form action="form.php" target="resultiframe" method="post" id="mainform" autocomplete="on" novalidate>
         <fieldset>
             <legend>Let's get to know each other</legend>
             <label for="contactname">What's your name?</label>
+            <!-- The attribute of the "for" element needs to match the "id" attribute of the "input" element for them to be bound together. -->
             <br><br>
             <input type="text" id="contactname" name="contactname"  placeholder="Queen B" autofocus>
-            <br><p>...</p><br>
+            <br><p>&hellip;</p><br>
             <label for="desires">What are you after? (Tick as many as you need)</label>
             <br><br>
-            <input type="checkbox" id="lipstick" name="item1" value="lipstick"><label for="lipstick">Lipstick</label>
+            <label for="lipstick">Lipstick</label><input type="checkbox" id="lipstick" name="item1" value="lipstick">
             <input type="checkbox" id="eyeliner" name="item2" value="eyeliner"><label for="eyeliner">Eye Liner</label>
             <input type="checkbox" id="foundation" name="item3" value="foundation"><label for="foundation">Foundation</label>
             <input type="checkbox" id="lipgloss" name="item4" value="lipgloss"><label for="lipgloss">Lip Gloss</label>
             <input type="checkbox" id="eyeshadow" name="item5" value="eyeshadow"><label for="eyeshadow">Eye Shadow</label>
             <input type="checkbox" id="blush" name="item6" value="blush"><label for="blush">Blush</label>
             <input type="checkbox" id="lashextensions" name="item7" value="lashextensions"><label for="lashextensions">Lash Extensions </label>
-            <br><p>...</p><br>
+            <br><p>&hellip;</p><br>
             <label for="age">How young are you?</label>
             <br><br>
             <input type="number" id="age" name="age" min="0" max="120">
-            <br><p>...</p><br>
+            <br><p>&hellip;</p><br>
             <label for="gender">What are you?</label>
             <br><br>
             <!-- Find out what the "value" attribute does -->
@@ -48,27 +49,32 @@
             <br>
             <input type="radio" id="prefernot" name="gender" value="prefernot"><label for="prefernot">Prefer not to say</label>
             <br><br>
+            <!-- To prevent the user from selecting multiple choices, use the same "name" value for every input option (as shown above). -->
+            <input type="button" id="indexbutton" name="indexbutton" onclick="document.location = 'frivolities-master-index.html' " value="Clickety Click">
             <!-- Form button text is defined with the value tag. -->
-            <input type="button" id="indexbutton" name="indexbutton" onclick="document.location = 'testing master index.html' " value="Clickety Click">
-            <br><p>...</p><br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>How would you like to be rewarded?</legend>    
+            <br>
             <label for="prefcolour">What colour do you prefer?</label>
             <br><br>
             <input type="radio" id="prefred" name="prefcolour"><label for="prefred"><img src="https://i.pinimg.com/originals/9d/ce/b6/9dceb66075eddcfda0a72e35d85b547c.jpg" height="120" alt="Sexy red" title="Sexy red"></label>
             <input type="radio" id="prefpink" name="prefcolour"><label for="prefpink"><img src="https://images.ctfassets.net/wlke2cbybljx/29AhDOc5UaP2dotxJClPrr/0a9d106dd4098b15fa870b79b77b621f/Hall-Of-Fame-model.jpg?w=500&h=500&fit=fill&fm=jpg&bg=" height="120" alt="Cute pink" title="Cute pink"></label>
             <input type="radio" id="prefpurple" name="prefcolour"><label for="prefpurple"><img src="https://i.pinimg.com/originals/12/b3/0b/12b30bfdb9f83436054b8d3643d2bb4d.jpg" height="120" alt="Powerful purple" title="Powerful purple"></label>
-            <br><p>...</p><br>
+            <br><p>&hellip;</p><br>
             <label for="gift">Choose a gift</label>
             <br><br>
             <select id="gift" name="gift" size="2" multiple>
                 <option value="winkylux">Winky Lux CONFETTI PH LIP BALM</option>
                 <option value="ysl" selected>YSL Rouge Volupté Shine</option>
                 <option value="omg">OMG LIP ME UP MATTE LIQUID LIPSTICK & LIP LINER - BAMBI</option>
-              </select>
-            <br><p>...</p><br>
+            </select>
+            <br><p>&hellip;</p><br>
             <label for="comments">Anything you'd like to add?</label>
             <br><br>
             <textarea id="comments" name="comments" style="width:100%; height:180px" placeholder="Go on, you can tell me!"></textarea>
-            <br><p>...</p><br>
+            <br><p>&hellip;</p><br>
             <label for="makeupstyle">What's your makeup style?</label>
             <br><br>
             <input list="makeupstyle" name="makeupstyle">
@@ -84,8 +90,8 @@
                 <option value="Permanent">
                 <option value="Mineral">
             </datalist>          
-            <br><p>...</p><br><br>
-            <input type="submit" onclick="document.location = '#resultiframe' "> <input type="submit" value="Submit as multipart/form-data" formenctype="multipart/form-data">
+            <br><p>&hellip;</p><br><br>
+            <input type="submit" value="Send it over" onclick="document.location = '#resultiframe' "> <input type="submit" value="Submit as multipart/form-data" formenctype="multipart/form-data">
         </fieldset>    
     </form>
     <p class="notes"><b>Note:</b> Notice that each input field must have a name attribute to be submitted. If the name attribute is omitted, the value of the input field will not be sent at all. The name attribute must be the same for all options of an input field, especially when using radio buttons, so that the user cannot select more that one option.</p>
