@@ -126,18 +126,24 @@
                 <br><br>
                 <label for="pass">Password</label> <input type="password" required="yes" id="pass" name="pass" size="12" value="123456" formnovalidate="formnovalidate">
                 <br><br>
-                <label for="rangenum">Range:</label> 0 <input type="range" id="rangenum" name="rangenum" min="0" max="100" step="10" value="50"> 100
-                <br><br>
                 <label for="searchquery">Search</label> <input type="search" id="searchquery" name="searchquery" size="60" placeholder="Input an invalid number in the next field and click submit">
                 <br><br>
                 <label for="mobile">Mobile number</label> <input type="text" value="(+61)" size="5" disabled> <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" size="10" maxlength="10" title="Must be an Australian mobile number, starting in 04">
                 <br><br>
                 <label for="supplyurl">URL</label> <input type="url" id="supplyurl" name="supplyurl" disabled value="facialfrivolities.com">
                 <br><br><br>
-                <input type="submit"> <input type="submit" formaction="extras_admin.php" value="Submit as admin"> <input type="submit" formmethod="get" value="Submit and bookmark"> <input type="submit" formtarget="_blank" value="Submit and open in new window"> <input type="reset" value="Start again">
+                <input type="submit" method="post"> <input type="submit" formaction="extras_admin.php" value="Submit as admin"> <input type="submit" formmethod="get" value="Submit and bookmark"> <input type="submit" formtarget="_blank" method="post" value="Submit and open in new window"> <input type="reset" value="Start again">
                 <br><br>
         </fieldset>
     </form>
     <p class="notes"><b>Note:</b> A read-only input field cannot be modified (however, a user can tab to it, highlight it, and copy the text from it).<br>The value of a read-only input field will be sent when submitting the form!<br>The value of a disabled input field however will not be sent when submitting the form.</p>
+    <form action="anotherform.php" oninput="x.value=parseInt(rangenum.value)*parseInt(userinputnum.value)">
+        <label for="rangenum">Range and output element:</label>
+        <br><br>[ 0 <input type="range" id="rangenum" name="rangenum" min="0" max="100" step="2" value="50"> 100 ] * 
+        <input type="number" id="userinputnum" name="userinputnum" placeholder="Type any number here"> = 
+        <span style="border:1px solid black;width:24px;padding:6px;"><output name="x" for="rangenum userinputnum">&nbsp;<var>x</var>&nbsp;</output></span>
+        <br><br>
+        <input type="submit">
+    </form>
 </body>
 </html>
