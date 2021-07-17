@@ -22,7 +22,7 @@
             <label for="contactname">What's your name?</label>
             <!-- The attribute of the "for" element needs to match the "id" attribute of the "input" element for them to be bound together. -->
             <br><br>
-            <input type="text" id="contactname" name="contactname"  placeholder="Queen B" autofocus>
+            <input type="text" id="contactname" name="contactname"  placeholder="Queen B" autofocus required="yes">
             <br><p>&hellip;</p><br>
             <label for="desires">What are you after? (Tick as many as you need)</label>
             <br><br>
@@ -65,6 +65,7 @@
             <br><p>&hellip;</p><br>
             <label for="gift">Choose a gift</label>
             <br><br>
+            <!-- Does the "select" element require a pairing "input" element? -->
             <select id="gift" name="gift" size="2" multiple>
                 <option value="winkylux">Winky Lux CONFETTI PH LIP BALM</option>
                 <option value="ysl" selected>YSL Rouge Volupté Shine</option>
@@ -73,12 +74,12 @@
             <br><p>&hellip;</p><br>
             <label for="comments">Anything you'd like to add?</label>
             <br><br>
-            <textarea id="comments" name="comments" style="width:100%; height:180px" placeholder="Go on, you can tell me!"></textarea>
+            <textarea id="comments" name="comments" rows="10" cols="80" placeholder="Go on, you can tell me!"></textarea>
             <br><p>&hellip;</p><br>
             <label for="makeupstyle">What's your makeup style?</label>
             <br><br>
-            <input list="makeupstyle" name="makeupstyle">
-            <datalist id="makeupstyle">
+            <input list="makeupstylelist" id="makeupstyle" name="makeupstyle">
+            <datalist id="makeupstylelist">
                 <option value="Natural">
                 <option value="Evening">
                 <option value="Prom">
@@ -119,9 +120,9 @@
                 <br><br>
                 <label for="imgsubmit">Click your favourite colour to submit:</label>
                 <br><br>
-                <input type="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQZ5Lx9TPBqKFhIhPLN6M62OJaOc1aNm3iPHw&usqp=CAU/" id="imgsubmit" name="imgsubmit" alt="Pick one of the four" width="50" height="50">
+                <input type="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQZ5Lx9TPBqKFhIhPLN6M62OJaOc1aNm3iPHw&usqp=CAU/" id="imgsubmit" name="imgsubmit" alt="Image not loading - click here" width="50" height="50">
                 <br>
-                <p class="notes"><b>Note:</b>> The input type="image" sends the X and Y coordinates of the click that activated the image button.</p>
+                <p class="notes"><b>Note:</b>> The input type="image" can serve as a submit button. It sends the X and Y coordinates of the click that activated the image button.</p>
                 <label for="inputmonth">Month</label> <input type="month" id="inputmonth" name="inputmonth">
                 <br><br>
                 <label for="pass">Password</label> <input type="password" required="yes" id="pass" name="pass" size="12" value="123456" formnovalidate="formnovalidate">

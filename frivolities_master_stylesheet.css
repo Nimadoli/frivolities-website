@@ -82,6 +82,14 @@ button {
  font-family: 'Allura', serif;
 }
 
+input {
+  color: darkslateblue;
+}
+
+label {
+  font-weight: bold;
+}
+
 a:link, a:visited, a:active {
  color: magenta;
  font-family: 'Futura', sans-serif;
