@@ -47,7 +47,7 @@
             <br>
             <input type="radio" id="nonbinary" name="gender" value="nonbinary"><label for="nonbinary">Non-binary</label>
             <br>
-            <input type="radio" id="prefernot" name="gender" value="prefernot"><label for="prefernot">Prefer not to say</label>
+            <input type="radio" id="prefernot" name="gender" value="prefernot" checked="yes"><label for="prefernot">Prefer not to say</label>
             <br><br>
             <!-- To prevent the user from selecting multiple choices, use the same "name" value for every input option (as shown above). -->
             <input type="button" id="indexbutton" name="indexbutton" onclick="document.location = 'frivolities-master-index.html' " value="Clickety Click">
@@ -110,30 +110,34 @@
                 <br><br>
                 <label for="whatweek">Week</label> <input type="week" id="whatweek" name="whatweek">
                 <br><br>
-                <label for="birthday">When is your birthday?</label> <input type="date" id="birthday" name="birthday" min="1900-01-01" max="2020-10-09">
+                <label for="birthday">When is your birthday?</label> <input type="date" id="birthday" name="birthday" min="1900-01-01" max="2021-07-15"> <!-- Dates are written in European, non-American format, yay! -->
                 <br><br>
                 <label for="emailaddr">Email</label> <input type="email" id="emailaddr" name="emailaddr" form="mainform" autocomplete="off">
                 <br><br>
                 <label for="uplfile">File</label> <input type="file" id="uplfile" name="uplfile" multiple>
                 <br><br>
-                Hidden <span class="info" title="Find out more about this input type!">&#10068</span> <input type="hidden">
-                <br><br>
+                Hidden <span class="info" title="Useful for web developers">&#10068;</span> <input type="hidden" id="recordnum" name="recordnum" value="183">
+                <br>
+                <p class="notes"><b>Note:</b> A hidden field let web developers include data that cannot be seen or modified by users when a form is submitted. It often stores what database record needs to be updated when the form is submitted.</p>
+                <p class="notes notes2"><b>Also note:</b> While the value is not displayed to the user in the page's content, it is visible (and can be edited) using any browser's developer tools or "View Source" functionality. <strong>Do not use hidden inputs as a form of security!</strong></p>
+                <br>
                 <label for="imgsubmit">Click your favourite colour to submit:</label>
                 <br><br>
                 <input type="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQZ5Lx9TPBqKFhIhPLN6M62OJaOc1aNm3iPHw&usqp=CAU/" id="imgsubmit" name="imgsubmit" alt="Image not loading - click here" width="50" height="50">
-                <br>
-                <p class="notes"><b>Note:</b>> The input type="image" can serve as a submit button. It sends the X and Y coordinates of the click that activated the image button.</p>
-                <label for="inputmonth">Month</label> <input type="month" id="inputmonth" name="inputmonth">
                 <br><br>
-                <label for="pass">Password</label> <input type="password" required="yes" id="pass" name="pass" size="12" value="123456" formnovalidate="formnovalidate">
+                <input type="button" onclick="alert('Note: The input type=&quot;image&quot; can serve as a submit button. It sends the X and Y coordinates of the click that activated the image button.')" value="Need help with the form type above?">
+                <br><br>
+                <label for="inputmonth">Month and year</label> <input type="month" id="inputmonth" name="inputmonth" value="2021-07">
+                <br><br>
+                <label for="pass">Password</label> <input type="password" required id="pass" name="pass" size="12" value="123456" formnovalidate="formnovalidate">
                 <br><br>
                 <label for="searchquery">Search</label> <input type="search" id="searchquery" name="searchquery" size="60" placeholder="Input an invalid number in the next field and click submit">
                 <br><br>
-                <label for="mobile">Mobile number</label> <input type="text" value="(+61)" size="5" disabled> <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" size="10" maxlength="10" title="Must be an Australian mobile number, starting in 04">
+                <label for="mobile">Mobile number</label> <input type="text" value="(+61)" size="5" disabled> <input type="tel" id="mobile" name="mobile" pattern="[04]{2}[0-9]{8}" size="10" maxlength="10" title="Must be an Australian mobile number, starting in 04" placeholder="04xx xxx xxx">
                 <br><br>
                 <label for="supplyurl">URL</label> <input type="url" id="supplyurl" name="supplyurl" disabled value="facialfrivolities.com">
                 <br><br><br>
-                <input type="submit" method="post"> <input type="submit" formaction="extras_admin.php" value="Submit as admin"> <input type="submit" formmethod="get" value="Submit and bookmark"> <input type="submit" formtarget="_blank" method="post" value="Submit and open in new window"> <input type="reset" value="Start again">
+                <input type="submit" onclick="alert('Your data has been submitted.')"> <input type="submit" formaction="extras_admin.php" value="Submit as admin"> <input type="submit" formmethod="get" value="Submit and bookmark"> <input type="submit" formtarget="_blank" value="Submit and open in new window"> <input type="reset" value="Start again">
                 <br><br>
         </fieldset>
     </form>
