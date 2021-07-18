@@ -10,6 +10,7 @@
 </head>
 <body>
     <h1>A blank canvas...</h1>
+    <p>Canvas is rendered pixel by pixel. In canvas, once the graphic is drawn, it is forgotten by the browser. If its position should be changed, the entire scene needs to be redrawn, including any objects that might have been covered by the graphic.</p>
     <canvas id="lipstickcanvas" width="400" height="300" style="border: 1px solid magenta">
         Your browser does not support the HTML canvas tag.
     </canvas>
@@ -80,7 +81,7 @@
     <script>
         var c = document.getElementById("eyelinercanvas");
         var ctx = c.getContext("2d");
-        var grd = ctx.createRadialGradient(250, 280, 0, 100, 100, 260);
+        var grd = ctx.createRadialGradient(200, 225, 0, 200, 220, 120);
         grd.addColorStop(0, "magenta");
         grd.addColorStop(1, "lime");
         ctx.fillStyle = grd;
@@ -89,12 +90,12 @@
     <h3>A not-so-magic trick</h3>
     <img id="ysllips" alt="YSL lips" src="Alena_attitude_lips380x280.jpg" width="380" height="280">
     <p>
-    <button type="button" onclick="magiccanvas()">What will happen?</button>
+    <button type="button" onclick="magicCanvas()">What will happen?</button>
     </p>
-    <canvas id="magiccanvas" width="400" height="300" style="border: 1px solid magenta;"></canvas>
+    <canvas id="magicCanvas" width="400" height="300" style="border: 1px solid magenta;"></canvas>
     <script>
-        function magiccanvas() {
-            var c = document.getElementById("magiccanvas");
+        function magicCanvas() {
+            var c = document.getElementById("magicCanvas");
             var ctx = c.getContext("2d");
             var img = document.getElementById("ysllips");
             ctx.drawImage(img, 10, 10);
