@@ -29,7 +29,7 @@
             <p>SVG is a language for describing 2D graphics in XML. SVG is XML based, which means that every element is available within the SVG DOM. You can attach JavaScript event handlers for an element. In SVG, each drawn shape is remembered as an object. If attributes of an SVG object are changed, the browser can automatically re-render the shape.</p>
             <svg width="400" height="300" style="border:1px solid black;">
                 <circle cx="200" cy="150" r="120" stroke="magenta" stroke-width="46" fill="gold" />
-                Your browser does not support inline SVG.
+                You need to update your browser in order to view SVG graphics.
             </svg>
             <svg width="400" height="300">
                 <rect width="400" height="300" style="fill:lime;stroke-width:64px;stroke:slategrey;" />
@@ -56,19 +56,18 @@
                 </defs>
                 <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
                 <text fill="#ffffff" font-size="52" font-family="Impact" x="50" y="90">OMG</text>
-                You need to update your browser in order to view SVG graphics.
             </svg>
         </div>
         <p>
             <h2>Video content</h2>
             <br>
-            <video height="400" controls>
-              <source src="Snapchat-1720680841.mp4">
+            <video height="400" controls autoplay muted>
+              <source src="Snapchat-1720680841.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
         </p>
         <div style="text-align:center;border:1px solid black;padding:24px;">
-            <button type="button" onclick="playPause()">play/Pause</button>
+            <button type="button" onclick="playPause()">play/pause</button>
             <button type="button" onclick="makeBig()">big</button>
             <button type="button" onclick="makeSmall()">small</button>
             <button type="button" onclick="makeNormal()">normal</button>
@@ -81,32 +80,32 @@
         <script>
             var myVideo = document.getElementById("mouthvideo");
             function playPause() {
-            if (myVideo.paused)
-                myVideo.play();
-            else
-                myVideo.pause();
+                if (myVideo.paused)
+                    myVideo.play();
+                else
+                    myVideo.pause();
             }
             function makeBig() {
-            myVideo.width = 400;
+                myVideo.width = 400;
             }
             function makeSmall() {
-            myVideo.width = 100;
+                myVideo.width = 100;
             }
             function makeNormal() {
-            myVideo.width = 200;
+                myVideo.width = 200;
             }
         </script>
     <noscript>You need to get JavaScript support on you browser!</noscript>
     <h2>Audio content</h2>
         <br>
         <audio controls style="background-color:magenta; padding:12px;">
-            <source src="Just_A_Kiss_-_Mishon.mp3" type="audio/mpeg">
+            <source src="Just_A_Kiss_-_Mishon.mp3" type="audio/mpeg"> <!-- Mp3 media type is written as "audio/mpeg". -->
             Your browser does not support the audio element.
         </audio>
         <br>
         <h2>The embed element</h2>
         <br>
-        <embed src="frivolities_master_stylesheet.css" style="border:1px solid black;background-color:white;padding:24px;width:600px;height:300px;" allow="autoplay;">
+        <embed src="frivolities_master_stylesheet.css" style="border:1px solid black;background-color:white;padding:24px;width:600px;height:300px;">
         <div>
             <h2>YouTube videos</h2>
             <br>
