@@ -10,118 +10,135 @@
 </head>
 <body>
     <h1>Testing APIs</h1>
-    <h2>Location API</h2>
-    <p>Let's get your location!</p>
-    <button type="button" onclick="getLocation()">Approve</button>
-    <p>It might take a few secs for your coordinates to show up, just hold on.</p>
-    <div id="locate" style="border:1px solid black; padding:24px;">Coordinates will show here</div>
-    <script>
-        var x = document.getElementById("locate");
-        function getLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition, showError);
-            }
-            else {
-                x.innerHTML = "Geolocation is not supported by this browser.";
-            }
-        }
-        function showPosition(position) {
-            x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude + "<br>Altitude: " + position.coords.altitude + "<br>Timestamp: " + position.timestamp + " (wtf?)";
-        }
-        function showError(error) {
-            switch(error.code) {
-                case error.PERMISSION_DENIED:
-                    x.innerHTML = "User denied the request for Geolocation." 
-                    break;
-                case error.POSITION_UNAVAILABLE:
-                    x.innerHTML = "Location information is unavailable."
-                    break;
-                case error.TIMEOUT:
-                    x.innerHTML = "The request to get user location timed out."
-                    break;
-                case error.UNKNOWN_ERROR:
-                    x.innerHTML = "An unknown error occured."
-                    break;
-            }
-        }
-    </script>
-    <!-- Currently not working:
-    <p>Location viewed on Google Maps</p>
-    <button type="button" onclick="getMap()">Let's go</button>
-    <br><br>
-    <div id="gmap" style="border:1px solid black;padding:24px;">Location viewed on Google Maps will show here</div>
-    <script>
-        var x = document.getElementById("gmap");
-        function getMap() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showMap, showError);
-            }
-            else {
-                x.innerHTML = "Geolocation is not supported by this browser.";
-            }
-        }
-        function showMap(position) {
-            var latlon = position.coords.latitude + "," + position.coords.longitude;
-            var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=14&size=400x300&sensor=false&key=YOUR_KEY";
-            document.getElementById("gmap").innerHTML = "<img src='"+img_url+"'>";
-        }
-    </script>
-    -->
-    <p class="notes"><b>Note:</b> Note: As of Chrome 50, the Geolocation API will only work on secure contexts such as HTTPS. If your site is hosted on an non-secure origin (such as HTTP) the requests to get the users location will no longer function.</p>
-    <br>
-    <h2>Testing HTML Web Storage</h2>
-    <p>Count how many times a button can be clicked.</p>
-    <script>
-        function clickCounter() {
-            if (typeof(Storage) !== "undefined") {
-                if (localStorage.clickcount) {
-                    localStorage.clickcount = Number(localStorage.clickcount)+1;
-                } else {
-                    localStorage.clickcount = 1;
+    <section>
+        <h2>Location API</h2>
+        <p>Let's get your location!</p>
+        <button type="button" onclick="getLocation()">Approve</button>
+        <p>It might take a few secs for your coordinates to show up, just hold on.</p>
+        <div id="locate" style="border:1px solid black; padding:24px;">Coordinates will show here</div>
+        <script>
+            var x = document.getElementById("locate");
+            function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition, showError);
                 }
-            document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
-            } else {
-                document.getElementById("result").innerHTML = "Computer says no.";
+                else {
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                }
             }
+            function showPosition(position) {
+                x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude + "<br>Altitude: " + position.coords.altitude + "<br>Timestamp: " + position.timestamp + " (wtf?)";
+            }
+            function showError(error) {
+                switch(error.code) {
+                    case error.PERMISSION_DENIED:
+                        x.innerHTML = "User denied the request for Geolocation." 
+                        break;
+                    case error.POSITION_UNAVAILABLE:
+                        x.innerHTML = "Location information is unavailable."
+                        break;
+                    case error.TIMEOUT:
+                        x.innerHTML = "The request to get user location timed out."
+                        break;
+                    case error.UNKNOWN_ERROR:
+                        x.innerHTML = "An unknown error occured."
+                        break;
+                }
+            }
+        </script>
+        <!-- Currently not working:
+        <p>Location viewed on Google Maps</p>
+        <button type="button" onclick="getMap()">Let's go</button>
+        <br><br>
+        <div id="gmap" style="border:1px solid black;padding:24px;">Location viewed on Google Maps will show here</div>
+        <script>
+            var x = document.getElementById("gmap");
+            function getMap() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showMap, showError);
+                }
+                else {
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                }
+            }
+            function showMap(position) {
+                var latlon = position.coords.latitude + "," + position.coords.longitude;
+                var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=14&size=400x300&sensor=false&key=YOUR_KEY";
+                document.getElementById("gmap").innerHTML = "<img src='"+img_url+"'>";
+            }
+        </script>
+        -->
+        <p class="notes"><b>Note:</b> Note: As of Chrome 50, the Geolocation API will only work on secure contexts such as HTTPS. If your site is hosted on an non-secure origin (such as HTTP) the requests to get the users location will no longer function.</p>
+    </section>
+    <section>
+        <h2>Testing HTML Web Storage</h2>
+        <h3>Count how many times a button can be clicked.</h3>
+        <script>
+            function clickCounter() {
+                if (typeof(Storage) !== "undefined") {
+                    if (localStorage.clickcount) {
+                        localStorage.clickcount = Number(localStorage.clickcount)+1;
+                    } else {
+                        localStorage.clickcount = 1;
+                    }
+                document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+                } else {
+                    document.getElementById("result").innerHTML = "Computer says no.";
+                }
+            }
+        </script>
+        <p>
+            <button onclick="clickCounter()" type="button">Let's start!</button>
+            <div id="result" style="border:1px solid black;padding:24px;">How many clicks so far?</div>
+        </p>
+        <p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
+        <h3>Retrieve local storage item</h3>
+        <p>The most useless beauty product:</p>
+        <button type="button" onclick="getElementById('potato').innerHTML = localStorage.getItem('uselessprod')">...and the winner is...</button>
+        <br><br>
+        <div id="potato" style="padding:24px;border:1px solid black;">...wait for it...</div>
+        <script>
+            if (typeof(Storage) !== "undefined") {
+                localStorage.setItem("uselessprod", "Anti-ageing shampoo");
+            } else {
+                document.getElementById("potato").innerHTML = "Your spud is a dud.";
+            }
+        </script>
+    </section>
+    <section>
+        <h2>Web Workers</h2>
+        <p>I am counting <output id="counting"></output> dead muthafuckers.</p>
+        <button type="button" onclick="startWorker()">Let the bodies hit the floor</button>
+        <button type="button" onclick="stopWorker()">Enough now</button>
+        <p class="note">Only works on Internet Explorer 10 onward.</p>
+        <script>
+            var w;
+        function startWorker() {
+            if(typeof(Worker) !== "undefined") {
+                if(typeof(w) == "undefined") {
+                    w = new Worker("demo_workers.js");
+            }
+                w.onmesage = function(event) {
+                document.getElementById("counting").innerHTML = event.data;
+            };
+            } else {
+            document.getElementById("counting").innerHTML = "Computer says... no.";
+            }
+            }
+            function stopWorker() {
+            w.terminate();
+            w = undefined;
         }
-    </script>
-    <p>
-        <button onclick="clickCounter()" type="button">Let's start!</button>
-        <div id="result" style="border:1px solid black;padding:24px;">How many clicks so far?</div>
-    </p>
-    <p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
-    <h2>Web Workers</h2>
-    <p>I am counting <output id="counting"></output> dead muthafuckers.</p>
-    <button type="button" onclick="startWorker()">Let the bodies hit the floor</button>
-    <button type="button" onclick="stopWorker()">Enough now</button>
-    <p class="note">Only works on Internet Explorer 10 onward.</p>
-    <script>
-        var w;
-	function startWorker() {
-	    if(typeof(Worker) !== "undefined") {
-	        if(typeof(w) == "undefined") {
-	            w = new Worker("demo_workers.js");
-		}
-	    	w.onmesage = function(event) {
-		    document.getElementById("counting").innerHTML = event.data;
-		};
-	    } else {
-		document.getElementById("counting").innerHTML = "Computer says... no.";
-		}
-	    }
-        function stopWorker() {
-	    w.terminate();
-	    w = undefined;
-	}
-    </script>
-    <noscript>You need to get JavaScript support on you browser!</noscript>
-    <p class="note"><b>Note:</b> Normally web workers are not used for such simple scripts, but for more CPU intensive tasks.</p>
-    <p class="note2"><b>Also note:</b> Since web workers are in external files, they do not have access to the following JavaScript objects:
-	<ul>
-	    <li>the window object</li>
-	    <li>the document object</li>
-	    <li>the parent object</li>
-	</ul>
-    </p>
+        </script>
+        <noscript>You need to get JavaScript support on you browser!</noscript>
+        <p class="note"><b>Note:</b> Normally web workers are not used for such simple scripts, but for more CPU intensive tasks.</p>
+        <p class="note2"><b>Also note:</b> Since web workers are in external files, they do not have access to the following JavaScript objects:
+        <ul>
+            <li>the window object</li>
+            <li>the document object</li>
+            <li>the parent object</li>
+        </ul>
+        </p>
+    </section>
 </body>
 </html>
