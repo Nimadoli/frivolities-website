@@ -107,23 +107,23 @@
     </section>
     <section>
         <h2>Web Workers</h2>
-        <p>I am counting <output id="counting"></output> dead muthafuckers.</p>
+        <p>I am counting <output id="counting">...</output> dead muthafuckers.</p>
         <button type="button" onclick="startWorker()">Let the bodies hit the floor</button>
         <button type="button" onclick="stopWorker()">Enough now</button>
         <p class="note">Only works on Internet Explorer 10 onward.</p>
         <script>
             var w;
-        function startWorker() {
-            if(typeof(Worker) !== "undefined") {
-                if(typeof(w) == "undefined") {
-                    w = new Worker("demo_workers.js");
-            }
-                w.onmesage = function(event) {
-                document.getElementById("counting").innerHTML = event.data;
-            };
-            } else {
-            document.getElementById("counting").innerHTML = "Computer says... no.";
-            }
+            function startWorker() {
+                if(typeof(Worker) !== "undefined") {
+                    if(typeof(w) == "undefined") {
+                        w = new Worker("demo_workers.js");
+                    }
+                    w.onmessage = function(event) {
+                        document.getElementById("counting").innerHTML = event.data;
+                    };
+                } else {
+                    document.getElementById("counting").innerHTML = "Sorry, your browser does not support Web Workers...";
+                }
             }
             function stopWorker() {
             w.terminate();
@@ -139,6 +139,22 @@
             <li>the parent object</li>
         </ul>
         </p>
+    </section>
+    <section>
+        <h2>Server-Sent Events</h2>
+        <p>What's the time on the server?</p>
+        <div id="serverresult" style="border:1px solid black;padding:24px;"></div>
+        <p>For this example to work, you need a server capable of sending data updates (like PHP or ASP).</p>
+        <script>
+            if(typeof(EventSource) !== "undefined") {
+              var source = new EventSource("demo_sse.php");
+              source.onmessage = function(event) {
+                document.getElementById("serverresult").innerHTML += event.data + "<br>";
+              };
+            } else {
+              document.getElementById("serverresult").innerHTML = "Computer says no to server-sent events...";
+            }
+            </script>
     </section>
 </body>
 </html>

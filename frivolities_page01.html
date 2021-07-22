@@ -79,13 +79,13 @@ An image: &lt;img src="https://pagedesignpro.com/wp-content/uploads/2018/06/lapt
        <h2>Counting down the clicks...</h2> 
        <script>
            function clickCounter() {
-               if (typeof(Storage) !== "undefined") {
+                if (typeof(Storage) !== "undefined") {
                     if (sessionStorage.clickcount) {
                        sessionStorage.clickcount = Number(sessionStorage.clickcount)-1;
                     } else {
-                            sessionStorage.clickcount = 1824;
+                        sessionStorage.clickcount = 1824;
                     }
-                    document.getElementById("result").innerHTML = "..." + sessionStorage.clickcount + " day(s) to go." 
+                    document.getElementById("result").innerHTML = "..." + sessionStorage.clickcount + " day(s) to go."; 
                 } else {
                     document.getElementById("result").innerHTML = "Computer says no.";
                 }
@@ -94,7 +94,7 @@ An image: &lt;img src="https://pagedesignpro.com/wp-content/uploads/2018/06/lapt
        <br>
        <button type="button" onclick="clickCounter()">'Till I will find you there...</button>
        <br><br>
-       <div id="result" style="border:1px solid black;padding:24px;"></div>
+       <div id="result" style="border:1px solid black;padding:24px;">I don't care as long as I will get there with you.</div>
     </section>
     <hr>
     <footer>
