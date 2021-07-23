@@ -228,6 +228,11 @@ aside {
   margin-left: 24px;
 }
 
+#makeupaside {
+  border: 8px solid navy;
+  border-radius: 30px;
+}
+
 figure {
   background-color: lavender;
   padding: 24px;
