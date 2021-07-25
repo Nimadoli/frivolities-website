@@ -1,5 +1,5 @@
 body {
- background-color: rgba(220, 220, 220, 0.2);
+ background-color: rgba(220, 220, 220, 0.4);
  padding-left: 6%;
  padding-right: 6%;
  font-family: 'Futura', sans-serif;
@@ -331,4 +331,12 @@ li.shortcuts a:hover {
 
 #chessblack {
   background-color:black;
+}
+#page3footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color:#DCDCDC;
+  width: 100%;
+  text-align: center;
 }
