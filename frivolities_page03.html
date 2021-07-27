@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
 </head>
-<body style="padding: 76px;">
+<body style="padding-bottom:10%;">
     <h1>A blank canvas...</h1>
     <p>Canvas is rendered pixel by pixel. In canvas, once the graphic is drawn, it is forgotten by the browser. If its position should be changed, the entire scene needs to be redrawn, including any objects that might have been covered by the graphic.</p>
     <canvas id="lipstickcanvas" width="400" height="300" style="border: 1px solid magenta">
@@ -128,16 +128,52 @@
             <p><cite><a href="https://www.familyfriendpoems.com/poem/do-not-stand-by-my-grave-and-weep-by-mary-elizabeth-frye/" title="Poem source" target="_top">Do Not Stand At My Grave And Weep</a></cite> by Mary Elizabeth Frye</p>
         </div>
     </div>
+    <section>
+        <div><h2>Title yourself grand</h2></div>
+        <div style="float:left;width:60%;">
+            <figure>
+                <img alt="Don't be a drag" src="https://cdn.shopify.com/s/files/1/1021/8371/products/XAIA5_036_590x.jpg?v=1569789067" width="300">
+                <figcaption>Portrait of a Lady</figcaption>
+            </figure>
+        </div>
+        <div style="float:left;width:40%;">
+            <pre>
+Not like the brazen giant of Greek fame,
+With conquering limbs astride from land to land;
+Here at our sea-washed, sunset gates shall stand
+A mighty woman with a torch, whose flame
+Is the imprisoned lightning, and her name
+Mother of Exiles. From her beacon-hand
+Glows world-wide welcome; her mild eyes command
+The air-bridged harbor that twin cities frame.
+“Keep, ancient lands, your storied pomp!” cries she
+With silent lips. “Give me your tired, your poor,
+Your huddled masses yearning to breathe free,
+The wretched refuse of your teeming shore.
+Send these, the homeless, tempest-tost to me,
+I lift my lamp beside the golden door!”
+            </pre>
+            <p><cite>The New Colossus</cite> by Emma Lazarus</p>
+        </div>
+    </section>
     <div>
-        <h2>Title yourself grand</h2>
-        <br>
-        <figure>
-            <img alt="Don't be a drag" src="https://cdn.shopify.com/s/files/1/1021/8371/products/XAIA5_036_590x.jpg?v=1569789067" width="400">
-            <figcaption>Portrait of a Lady</figcaption>
-        </figure>
+        <h3 id="buttonheading">A button to click!</h3>
+        <button type="button" onclick="displayResult()">What will it do?</button>
     </div>
+    <script>
+        function displayResult() {
+            document.getElementById('buttonheading').innerHTML = "Oh no, you shouldn't have pressed the button!"
+        }
+    </script>
     <div id="page3footer">
         <p>Musings courtesy of Nicole Oliveira &#128516;</p>
+        <ul>
+            <li style="display:inline;">Contact:</li>
+            <li style="display:inline;">15/38 Alt St,</li>
+            <li style="display:inline;">Ashfield,</li>
+            <li style="display:inline;">NSW 2131</li>
+            <li style="display:inline;"><a href="mailto:nicoleoliveira@live.co.uk?subject=Hello" alt="Get in touch">nicoleoliveira@live.co.uk</a></li>
+        </ul>  
     </div>
 </body>
 </html>
