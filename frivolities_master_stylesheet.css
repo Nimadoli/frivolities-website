@@ -74,6 +74,7 @@ blockquote {
 pre {
  background-color: white;
  padding: 24px;
+ overflow: auto;
 }
 
 button {

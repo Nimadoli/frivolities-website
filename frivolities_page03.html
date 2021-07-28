@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
 </head>
-<body style="padding-bottom:10%;">
+<body style="padding-bottom:14%;">
     <h1>A blank canvas...</h1>
     <p>Canvas is rendered pixel by pixel. In canvas, once the graphic is drawn, it is forgotten by the browser. If its position should be changed, the entire scene needs to be redrawn, including any objects that might have been covered by the graphic.</p>
     <canvas id="lipstickcanvas" width="400" height="300" style="border: 1px solid magenta">
@@ -159,12 +159,88 @@ I lift my lamp beside the golden door!”
     <div>
         <h3 id="buttonheading">A button to click!</h3>
         <button type="button" onclick="displayResult()">What will it do?</button>
+        <script>
+            function displayResult() {
+                document.getElementById('buttonheading').innerHTML = "Oh no, you shouldn't have pressed the button!"
+            }
+        </script>
     </div>
-    <script>
-        function displayResult() {
-            document.getElementById('buttonheading').innerHTML = "Oh no, you shouldn't have pressed the button!"
-        }
-    </script>
+    <div>
+        <h3>Look, another button!</h3>
+        <button type="button" onclick="getRebecca()">Not another one!</button>
+        <br><br>
+        <canvas id="solidcolour" width="600" height="240" style="border:1px solid black;">Not supported - please update your browser to view this feature.</canvas>
+        <script>
+            function getRebecca() {
+                var c = document.getElementById("solidcolour");
+                var ctx = c.getContext("2d");
+                /* Fill a rectangle with color: */
+                ctx.fillStyle = "#663399";
+                ctx.fillRect(10,20,400,100);
+                /* Draw a black diagonal stroke: */
+                ctx.moveTo(0,0);
+                ctx.lineTo(600,240);
+                ctx.stroke();
+                /* Draw a circle: */
+                ctx.beginPath();
+                ctx.arc(440,140,80,0,2*Math.PI);
+                ctx.stroke();
+            }
+        </script>
+    </div>
+    <div>
+        <h3>Geez, what's with the buttons?</h3>
+        <button type="button" onclick="drawText()">Here we go again.</button>
+        <br><br>
+        <canvas id="etc" width="600" height="240" style="border:1px solid black;">Not supported - please update your browser to view this feature.</canvas>
+        <script>
+            function drawText() {
+                var c = document.getElementById("etc");
+                var ctx = c.getContext("2d");
+                /* Draw black text: */
+                ctx.font = "24px Courier";
+                ctx.fillText("You're beautiful, it's true.",160,180);
+                /* Draw hollow (stroked) text: */
+                ctx.font = "42px Arial";
+                ctx.strokeText("You must be an angel", 40,120);
+            }
+        </script>
+    </div>
+    <div>
+        <h3>Yep, it's another button</h3>
+        <button type="button" onclick="linearGrad()">You've got no choice</button>
+        <br><br>
+        <canvas id="gradcanvas" width="600" height="240" style="border:1px solid black;">Not supported - please update your browser to view this feature.</canvas>
+        <script>
+            function linearGrad() {
+                var c = document.getElementById("gradcanvas");
+                var ctx = c.getContext("2d");
+                /* Draw a linear gradient: */
+                var grd = ctx.createLinearGradient(0,0,580,0);
+                grd.addColorStop(0,"cyan");
+                grd.addColorStop(1,"magenta");
+                ctx.fillStyle = grd;
+                ctx.fillRect(10,10,580,220);
+            }
+        </script>
+    </div>
+    <div>
+        <h3>Last one, I promise</h3>
+        <button type="button" onclick="circularGrad()">Almost over</button>
+        <br><br>
+        <canvas id="circgrad" width="600" height="240" style="border:1px solid black">Not supported - please update your browser to view this feature.</canvas>
+        <script>
+            function circularGrad() {
+                var c = document.getElementById("circgrad");
+                var ctx = c.getContext("2d");
+                var grd = ctx.createRadialGradient(75,50,5,90,60,200);
+                grd.addColorStop(0,"lime");
+                grd.addColorStop(1,"violet");
+                ctx.fillStyle = grd;
+                ctx.fillRect(10,10,580,220);
+            }
+        </script>
+    </div>
     <div id="page3footer">
         <p>Musings courtesy of Nicole Oliveira &#128516;</p>
         <ul>

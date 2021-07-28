@@ -145,7 +145,7 @@
     <form action="anotherform.php" oninput="x.value=parseInt(rangenum.value)*parseInt(userinputnum.value)">
         <label for="rangenum">Range and output element:</label>
         <br><br>[ 0 <input type="range" id="rangenum" name="rangenum" min="0" max="100" step="2" value="50"> 100 ] * 
-        <input type="number" id="userinputnum" name="userinputnum" placeholder="Type any number here"> = 
+        <input type="number" id="userinputnum" name="userinputnum" value="25"> = 
         <span style="border:1px solid black;width:24px;padding:6px;"><output name="x" for="rangenum userinputnum">&nbsp;<var>x</var>&nbsp;</output></span>
         <br><br>
         <input type="submit">
