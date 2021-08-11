@@ -95,15 +95,16 @@ label {
   font-weight: bold;
 }
 
-a:link, a:visited, a:active {
- color: magenta;
- text-decoration: none;
-}
-
+a {text-decoration: none;}
+a:link {color: magenta;}
+a:visited {color: darkmagenta;}
 a:hover {
  color: white;
  background-color: magenta;
- text-decoration: none;
+}
+a:active {
+  color: white;
+  background-color: darkmagenta;
 }
 
 .a01:link, .a01:visited {
@@ -115,8 +116,11 @@ a:hover {
   display: inline-block;
 }
 
-.a01:hover, #a01:active {
+.a01:hover {
   background-color: red;
+}
+.a01:active {
+  background-color: orange;
 }
 
 #a02:link {
@@ -356,4 +360,8 @@ p.beautyconcept {
 span.vertalign {
   padding: 4px;
   border: 1px solid black;
+}
+
+.fancy-bullets {
+  list-style-image: url('https://kris.boncook.com/images/UpdateProgress.gif');
 }
