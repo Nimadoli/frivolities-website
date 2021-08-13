@@ -364,4 +364,7 @@ span.vertalign {
 
 .fancy-bullets {
   list-style-image: url('https://kris.boncook.com/images/UpdateProgress.gif');
+  list-style-position: inside;
+  border: 1px solid black;
+  padding: 24px;
 }
