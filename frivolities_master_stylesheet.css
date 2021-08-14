@@ -325,6 +325,7 @@ li.shortcuts a:hover {
 
 .dragdiv {
   border:1px solid black;
+  background-color: white;
   width:420px;
   height:300px;
 }
@@ -338,6 +339,7 @@ li.shortcuts a:hover {
 
 #chesswhite {
   border:1px solid black;
+  background-color: white;
 }
 
 #chessblack {
@@ -368,3 +370,18 @@ span.vertalign {
   border: 1px solid black;
   padding: 24px;
 }
+section#money-container {
+  padding: 24px;
+  background-color: white;
+  margin: 24px 0;
+}
+div.money-box {
+  float: left;
+  text-align: center;
+  width: 30%;
+  border: 1px solid black;
+  margin: 6px;
+  padding: 8px;
+}
+button.money-button {width:100%;}
+svg {background-color: white;}

@@ -27,14 +27,14 @@
             <h2>SVG graphics</h2>
             <br>
             <p>SVG is a language for describing 2D graphics in XML. SVG is XML based, which means that every element is available within the SVG DOM. You can attach JavaScript event handlers for an element. In SVG, each drawn shape is remembered as an object. If attributes of an SVG object are changed, the browser can automatically re-render the shape.</p>
-            <svg width="400" height="300" style="border:1px solid black;">
+            <svg width="400" height="300">
                 <circle cx="200" cy="150" r="120" stroke="magenta" stroke-width="46" fill="gold" />
                 You need to update your browser in order to view SVG graphics.
             </svg>
             <svg width="400" height="300">
                 <rect width="400" height="300" style="fill:lime;stroke-width:64px;stroke:slategrey;" />
             </svg>
-            <svg width="400" height="300" style="border:1px solid black;">
+            <svg width="400" height="300">
                 <defs>
                     <linearGradient id="grad2" x1="0%" y1="100%" x2="100%" y="0%">
                         <stop offset="0%" style="stop-color:rgb(255,0,255);stop-opacity:1;" />
@@ -44,10 +44,10 @@
                 </defs>
                 <rect x="25" y="25" rx="80" ry="30" width="280" height="220" style="fill:url('#grad2');stroke:black;stroke-width:12px;opacity:0.8;" />
             </svg>
-            <svg width="400" height="300" style="border:1px solid black;">
+            <svg width="400" height="300">
                 <polygon points="100,10 40,182 190,78 10,78 160,182" style="fill:lime;stroke:gold;stroke-width:6;fill-rule:evenodd;" />
             </svg>
-            <svg width="400" height="300" style="border:1px solid black;">
+            <svg width="400" height="300">
                 <defs>
                     <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
                         <stop offset="0%" style="stop-color:#FA8072;stop-opacity:1" />
@@ -66,7 +66,7 @@
               Your browser does not support the video tag.
             </video>
         </p>
-        <div style="text-align:center;border:1px solid black;padding:24px;">
+        <div style="text-align:center;border:1px solid black;padding:24px;background-color:white;">
             <button type="button" onclick="playPause()">play/pause</button>
             <button type="button" onclick="makeBig()">big</button>
             <button type="button" onclick="makeSmall()">small</button>
@@ -173,6 +173,31 @@
         </section>
         <h3>An SVG file vs. SVG code</h3>
         <img src="yen-svgrepo-com.svg" alt="Yen symbol">
-        <svg width="100" height="100" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.2 3.4 12 10.333 6.8 3.4 5.2 4.6 10 11H7v2h4v2H7v2h4v4h2v-4h4v-2h-4v-2h4v-2h-3l4.8-6.4z"/></svg>
+        <svg width="100" height="100" style="background-color:initial;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.2 3.4 12 10.333 6.8 3.4 5.2 4.6 10 11H7v2h4v2H7v2h4v4h2v-4h4v-2h-4v-2h4v-2h-3l4.8-6.4z"/></svg>
+        <section id="money-container">
+            <div style="width:95%;margin:auto;">
+            <div class="money-box" id="money1">
+                <h4>If it don't make dollars</h4>
+                <img alt="American dollar notes" style="width:100%;" src="money/pexels-john-guccione-wwwadvergroupcom-3483098.jpg">
+                <button type="button" class="money-button" onclick="document.getElementById('money1').style.display = 'none'">Remove element</button>
+            </div>
+            <div class="money-box" id="money2">
+                <h4>It don't make sense</h4>
+                <img alt="Euro coins" style="width:100%;" src="money/pexels-pixabay-106152.jpg">
+                <button type="button" class="money-button" onclick="document.getElementById('money2').style.visibility = 'hidden'">Make element invisible</button>
+            </div>
+            <div class="money-box">
+                <h4>Where's the money?</h4>
+                <img alt="Piggy bank" style="width:100%;" src="money/pexels-cottonbro-3943723-horizontal.jpg">
+                <button type="button" class="money-button" onclick="restoreElements()">Show me the money</button>
+            </div>
+        </div>
+            <script>
+                function restoreElements() {
+                    document.getElementById("money1").style.display = "block";
+                    document.getElementById("money2").style.visibility = "visible";
+                }
+            </script>
+        </section>
     </body>
 </html>
