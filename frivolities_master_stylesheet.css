@@ -1,5 +1,5 @@
 body {
- background-color: rgba(220, 220, 220, 0.4);
+ background-color: #f1f1f1;
  padding-left: 6%;
  padding-right: 6%;
  font-family: 'Futura', Verdana, sans-serif;
@@ -156,6 +156,14 @@ nav {
   border-bottom: 1px solid black;
 }
 
+nav#header-nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #f1f1f1;
+  margin-top: 12px;
+}
+
 ul.nav {
   list-style-type: none;
   margin: 0;
@@ -215,7 +223,7 @@ li.nav a {
   padding-right: 24px;
 }
 
-section::after {
+.clearfix::after {
   content: "";
   display: table;
   clear: both;
@@ -254,21 +262,26 @@ figure {
   width: 50%;
 }
 
-table {
+table#barbie-table {
   padding-top: 12px;
   padding-bottom: 12px;
 }
 
-td {
-  width: 33%;
+td.barbie {
+  width: 33.33%;
+  padding: 8px;
 }
 
 @media (max-width:800px) {
-  .column, .floatnarrow, .floatwide, aside, td {
+  .column, .floatnarrow, .floatwide, aside, td.barbie {
     width: 100%;
   }
-  td {
+  td.barbie {
     display: block;
+  }
+  div.money-box {
+    float: none;
+    width: 100%;
   }
 }
 
@@ -371,9 +384,12 @@ span.vertalign {
   padding: 24px;
 }
 section#money-container {
-  padding: 24px;
+  padding: 24px 0px;
   background-color: white;
-  margin: 24px 0;
+}
+div.center-content {
+  width: 80%;
+  margin: auto;
 }
 div.money-box {
   float: left;
@@ -385,3 +401,16 @@ div.money-box {
 }
 button.money-button {width:100%;}
 svg {background-color: white;}
+#positioned-in-front {
+  position: relative;
+  height: 200px;
+}
+#positioned-behind {
+  background: url('pexels-gabb-tapique-3568543.jpg') no-repeat center;
+  background-size: cover;
+  position: absolute;
+  left: -40px;
+  top: 0;
+  z-index: -1;
+  height: 600px;
+}

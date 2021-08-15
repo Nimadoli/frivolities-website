@@ -171,27 +171,30 @@
                 <text fill="white" font-size="4.5em" font-family="Georgia" font-weight="bold" x="134" y="125">new look</text>
             </svg>
         </section>
-        <h3>An SVG file vs. SVG code</h3>
-        <img src="yen-svgrepo-com.svg" alt="Yen symbol">
-        <svg width="100" height="100" style="background-color:initial;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.2 3.4 12 10.333 6.8 3.4 5.2 4.6 10 11H7v2h4v2H7v2h4v4h2v-4h4v-2h-4v-2h4v-2h-3l4.8-6.4z"/></svg>
-        <section id="money-container">
-            <div style="width:95%;margin:auto;">
-            <div class="money-box" id="money1">
-                <h4>If it don't make dollars</h4>
-                <img alt="American dollar notes" style="width:100%;" src="money/pexels-john-guccione-wwwadvergroupcom-3483098.jpg">
-                <button type="button" class="money-button" onclick="document.getElementById('money1').style.display = 'none'">Remove element</button>
-            </div>
-            <div class="money-box" id="money2">
-                <h4>It don't make sense</h4>
-                <img alt="Euro coins" style="width:100%;" src="money/pexels-pixabay-106152.jpg">
-                <button type="button" class="money-button" onclick="document.getElementById('money2').style.visibility = 'hidden'">Make element invisible</button>
-            </div>
-            <div class="money-box">
-                <h4>Where's the money?</h4>
-                <img alt="Piggy bank" style="width:100%;" src="money/pexels-cottonbro-3943723-horizontal.jpg">
-                <button type="button" class="money-button" onclick="restoreElements()">Show me the money</button>
-            </div>
-        </div>
+        <section>
+            <h3>An SVG file vs. SVG code</h3>
+            <img src="yen-svgrepo-com.svg" alt="Yen symbol">
+            <svg width="100" height="100" style="background-color:initial;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.2 3.4 12 10.333 6.8 3.4 5.2 4.6 10 11H7v2h4v2H7v2h4v4h2v-4h4v-2h-4v-2h4v-2h-3l4.8-6.4z"/></svg>
+            <br>
+            <section id="money-container">
+                <div class="center-content">
+                    <div class="money-box" id="money1">
+                        <h4>If it don't make dollars</h4>
+                        <img alt="American dollar notes" style="width:100%;" src="money/pexels-john-guccione-wwwadvergroupcom-3483098.jpg">
+                        <button type="button" class="money-button" onclick="document.getElementById('money1').style.display = 'none'">Remove element</button>
+                    </div>
+                    <div class="money-box" id="money2">
+                        <h4>It don't make sense</h4>
+                        <img alt="Euro coins" style="width:100%;" src="money/pexels-pixabay-106152.jpg">
+                        <button type="button" class="money-button" onclick="document.getElementById('money2').style.visibility = 'hidden'">Make invisible</button>
+                    </div>
+                    <div class="money-box">
+                        <h4>Where's the money?</h4>
+                        <img alt="Piggy bank" style="width:100%;" src="money/pexels-cottonbro-3943723-horizontal.jpg">
+                        <button type="button" class="money-button" onclick="restoreElements()">Show me the money</button>
+                    </div>
+                </div>
+            </section>
             <script>
                 function restoreElements() {
                     document.getElementById("money1").style.display = "block";
