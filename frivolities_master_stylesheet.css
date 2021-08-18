@@ -47,10 +47,12 @@ h3 {
 }
 #starting-capital {
   float: left;
-  width: 0.7em;
+  width: 0.6em;
   font-size: 350%;
   line-height: 80%;
-  margin-right: 24px;
+  margin-right: 32px;
+  border: 2px solid;
+  padding: 8px;
 }
 
 mark {
@@ -152,6 +154,12 @@ a:active {
 
 .imglink:hover {
  background-color: transparent;
+}
+
+img.center-aligned {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 ul {
