@@ -50,11 +50,13 @@
     <hr>
     <section>
         <h3>Red light, green light, red light, green light</h3>
-        <img id="lights" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/237/large-green-circle_1f7e2.png" width="100" height="100">
-        <p>
-            <button type="button" onclick="redlightFunction()">Red light</button>
-            <button type="button" onclick="greenlightFunction()">Green light</button>
-        </p>
+        <div class="flex-center">
+            <img id="lights" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/237/large-green-circle_1f7e2.png" width="100" height="100">
+        </div>
+        <div class="flex-center">
+            <button type="button" class="margin-button" onclick="redlightFunction()">Red light</button>
+            <button type="button" class="margin-button" onclick="greenlightFunction()">Green light</button>
+        </div>
         <!-- Fix image links
             <script>
                 function redlightFunction() {

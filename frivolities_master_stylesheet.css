@@ -32,6 +32,12 @@ h3 {
  color: DeepPink;
 }
 
+h1 ~ p {margin-top: 32px;}
+
+h2 + p {margin-top: 24px;}
+
+p::first-letter {font-style: italic;}
+
 #p01 {
  color: DarkBlue;
  font-size: 1.4em;
@@ -90,6 +96,10 @@ pre {
  overflow: auto;
 }
 
+pre::first-line {
+  font-weight: bold;
+}
+
 button {
  color: magenta;
  font-size: 1.5em;
@@ -98,6 +108,12 @@ button {
 
 input {
   color: darkslateblue;
+}
+
+svg#Capa_1 {display: none;}
+
+input:valid + svg#Capa_1 {
+  display: inline;
 }
 
 label {
@@ -156,6 +172,11 @@ a:active {
  background-color: transparent;
 }
 
+div {
+  margin: 0;
+  padding: 0;
+}
+
 img.center-aligned {
   display: block;
   margin-left: auto;
@@ -177,6 +198,7 @@ nav#header-nav {
   top: 0;
   background-color: #f1f1f1;
   margin-top: 12px;
+  z-index: +1;
 }
 
 ul.nav {
@@ -243,6 +265,9 @@ li.nav a {
   display: table;
   clear: both;
 }
+.invisible {display: none;}
+.make-visible:hover {color: magenta;}
+.make-visible:hover + p {display: block;}
 
 hr {
   margin-top: 24px;
@@ -323,6 +348,15 @@ select {
   padding: 8px;
 }
 
+input:focus {
+  background-color: #DCDCDC;
+}
+
+input:invalid {
+  border: 2px solid red;
+  border-radius: 4px;
+}
+
 ul.shortcuts {
   list-style-type: none;
   overflow: hidden;
@@ -391,12 +425,23 @@ span.vertalign {
   padding: 4px;
   border: 1px solid black;
 }
-
+.relative {
+  position: relative;
+}
 .fancy-bullets {
   list-style-image: url('https://kris.boncook.com/images/UpdateProgress.gif');
   list-style-position: inside;
   border: 1px solid black;
   padding: 24px;
+}
+.position-behind {
+  margin: 0;
+  position: absolute;
+  top: 25%;
+  left: 20%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: -1;
 }
 section#money-container {
   padding: 24px 0px;
@@ -413,6 +458,17 @@ div.money-box {
   border: 1px solid black;
   margin: 6px;
   padding: 8px;
+}
+.flex-center {
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.margin-button {
+  margin-left: 24px;
+  margin-right: 24px;
+  width: 180px;
 }
 button.money-button {width:100%;}
 svg {background-color: white;}
@@ -440,3 +496,31 @@ svg {background-color: white;}
   border: 5px dotted slateblue;
   padding: 24px;
 }
+q:lang(fancy) {
+  quotes: "~" "~~";
+}
+/*
+Needs to be fixed:
+ul.target-links {
+  list-style-type: none;
+}
+ul.target-links li {
+  display: inline-block;
+}
+ul.target-links a {
+  margin: 0 12px;
+  padding: 12px;
+  background-color: white;
+  color: navy;
+}
+ul.target-links a:hover {
+  box-shadow: 4px 4px 6px #DCDCDC;
+}
+span#radioactive {
+  font-size: 14em;
+  line-height: 1;
+  display: block;
+  color: red;
+}
+#change-colour span:target {color:purple;}
+*/
