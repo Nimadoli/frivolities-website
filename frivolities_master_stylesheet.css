@@ -434,6 +434,7 @@ span.vertalign {
   border: 1px solid black;
   padding: 24px;
 }
+div {padding: 24px 0;}
 .position-behind {
   margin: 0;
   position: absolute;
@@ -499,28 +500,21 @@ svg {background-color: white;}
 q:lang(fancy) {
   quotes: "~" "~~";
 }
-/*
-Needs to be fixed:
-ul.target-links {
-  list-style-type: none;
-}
-ul.target-links li {
-  display: inline-block;
-}
-ul.target-links a {
-  margin: 0 12px;
+#shadow-button:link {
+  margin: 0;
   padding: 12px;
   background-color: white;
-  color: navy;
+  color: deeppink;
 }
-ul.target-links a:hover {
+#shadow-button:hover {
+  background-color: white;
+  color: deeppink;
   box-shadow: 4px 4px 6px #DCDCDC;
 }
-span#radioactive {
-  font-size: 14em;
+#radioactive {
+  font-size: 12em;
   line-height: 1;
   display: block;
   color: red;
 }
-#change-colour span:target {color:purple;}
-*/
+#radioactive:target {color:pink;}
