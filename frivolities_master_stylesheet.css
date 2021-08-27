@@ -110,11 +110,13 @@ input {
   color: darkslateblue;
 }
 
-svg#Capa_1 {display: none;}
-
-input:valid + svg#Capa_1 {
+/*
+Currently not working as expected
+input:valid::after {
+  content: url(basic-tick-small.svg);
   display: inline;
 }
+*/
 
 label {
   font-weight: bold;
@@ -185,6 +187,11 @@ img.center-aligned {
 
 ul {
  list-style-type: circle;
+}
+
+::marker {
+  color: deeppink;
+  font-size: 24px;
 }
 
 nav {
@@ -385,6 +392,14 @@ li.shortcuts a:hover {
     color: white;
 }
 
+#closing-elements::selection {
+  background-color: yellow;
+}
+
+#closing-elements::-moz-selection { /* Code for Firefox */
+  background-color: yellow;
+}
+
 .dragdiv {
   border:1px solid black;
   background-color: white;
@@ -518,3 +533,14 @@ q:lang(fancy) {
   color: red;
 }
 #radioactive:target {color:pink;}
+.transp-img {
+  float: left;
+  width: 30%;
+  height: auto;
+  opacity: 0.4;
+  margin: 0 12px;
+  padding: 0;
+}
+.transp-img:hover {
+  opacity: 1;
+}

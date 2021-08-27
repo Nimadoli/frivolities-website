@@ -124,16 +124,16 @@
             <br>
             <h2>Chess example</h2>
             <p>Drag the pawn between the squares.</p>
-            <div style="text-align:center;width:100%;">
+            <div class="clearfix" style="text-align:center;width:100%;">
                 <div id="chesswhite" ondrop="drop(event)" ondragover="allowDrop(event)">
                     <img src="black-pawn.png" draggable="true" ondragstart="drag(event)" id="pawn" height="80">
                 </div>
                 <div id="chessblack" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
             </div>
-            <div style="text-align:center;width:100%;">
-                <div id="chesswhite" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+            <div class="clearfix" style="text-align:center;width:100%;">
                 <div id="chessblack" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            </div>
+                <div id="chesswhite" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+</div>
         </section>
         <br>
         <section>
@@ -171,7 +171,7 @@
                 <text fill="white" font-size="4.5em" font-family="Georgia" font-weight="bold" x="134" y="125">new look</text>
             </svg>
         </section>
-        <section>
+        <section class="clearfix">
             <h3>An SVG file vs. SVG code</h3>
             <img src="yen-svgrepo-com.svg" alt="Yen symbol">
             <svg width="100" height="100" style="background-color:initial;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.2 3.4 12 10.333 6.8 3.4 5.2 4.6 10 11H7v2h4v2H7v2h4v4h2v-4h4v-2h-4v-2h4v-2h-3l4.8-6.4z"/></svg>
@@ -201,6 +201,14 @@
                     document.getElementById("money2").style.visibility = "visible";
                 }
             </script>
+        </section>
+        <section class="clearfix">
+            <h2>Images are essential</h2>
+            <div style="width:100%">
+            <div class="transp-img"><img alt="Purple and yellow lips" src="makeup-images/pexels-oleg-magni-922470.png" width=100%></div>
+            <div class="transp-img"><img alt="Red lip" src="makeup-images/pexels-rodolfo-clix-1161931.png" width=100%></div>
+            <div class="transp-img"><img alt="Frosted lips" src="makeup-images/pexels-rodolfo-clix-925802.png" width=100%></div>
+            </div>
         </section>
     </body>
 </html>
