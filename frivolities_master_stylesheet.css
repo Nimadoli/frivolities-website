@@ -200,8 +200,8 @@ nav {
 }
 
 nav#header-nav {
-  position: -webkit-sticky;
-  position: sticky;
+  position: -webkit-sticky; /* Code for Safari */
+  position: sticky; /* Sticky positioning is not supported by Internet Explorer */
   top: 0;
   background-color: #f1f1f1;
   margin-top: 12px;
