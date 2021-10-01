@@ -618,3 +618,7 @@ Because the styling of the navdrop text needs to be the same as the link styling
 .navdrop:hover .navdrop-content {
   display: block;
 }
+button[type="button"]:hover {box-shadow: 1px 1px 12px hsla(300, 100%, 50%, 0.4);}
+input[type="text"] {
+  color: rebeccapurple;
+}
