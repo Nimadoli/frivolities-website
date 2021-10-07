@@ -121,9 +121,11 @@ button {
  font-family: 'Allura', serif;
 }
 
-input {
-  color: darkslateblue;
+input[type=text], textarea, select {
+  margin: 8px;
+  padding: 12px 18px;
 }
+input[type=button]:hover {cursor: pointer;}
 
 /*
 Currently not working as expected
