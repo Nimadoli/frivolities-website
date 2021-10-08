@@ -121,11 +121,45 @@ button {
  font-family: 'Allura', serif;
 }
 
-input[type=text], textarea, select {
+input[type=text], input[list], textarea, select {
   margin: 8px;
   padding: 12px 18px;
 }
+
+option {padding: 6px 12px;}
+
+input[type=number] {padding: 12px 6px 12px 8px;}
+
 input[type=button]:hover {cursor: pointer;}
+
+input[type=search] {
+  background-image: url('glossy-icon-button-red.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 12px 20px 12px 46px;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=search]:focus {width: 100%;}
+
+input:focus {
+  background-color: #DCDCDC;
+}
+
+input:invalid {
+  border: 2px solid red;
+  border-radius: 4px;
+}
+
+input[type="text"] {
+  color: rebeccapurple;
+}
+
+textarea[id=more-comments] {
+  width: 100%;
+  resize: none;
+}
 
 /*
 Currently not working as expected
@@ -372,15 +406,6 @@ select {
   padding: 8px;
 }
 
-input:focus {
-  background-color: #DCDCDC;
-}
-
-input:invalid {
-  border: 2px solid red;
-  border-radius: 4px;
-}
-
 ul.shortcuts {
   list-style-type: none;
   overflow: hidden;
@@ -621,6 +646,3 @@ Because the styling of the navdrop text needs to be the same as the link styling
   display: block;
 }
 button[type="button"]:hover {box-shadow: 1px 1px 12px hsla(300, 100%, 50%, 0.4);}
-input[type="text"] {
-  color: rebeccapurple;
-}
