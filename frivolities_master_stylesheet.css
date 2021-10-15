@@ -121,44 +121,10 @@ button {
  font-family: 'Allura', serif;
 }
 
-input[type=text], input[list], textarea, select {
-  margin: 8px;
-  padding: 12px 18px;
-}
-
-option {padding: 6px 12px;}
-
-input[type=number] {padding: 12px 6px 12px 8px;}
-
-input[type=button]:hover {cursor: pointer;}
-
-input[type=search] {
-  background-image: url('glossy-icon-button-red.png');
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  background-size: contain;
-  padding: 12px 20px 12px 46px;
-  transition: width 0.4s ease-in-out;
-}
-
-input[type=search]:focus {width: 100%;}
-
-input:focus {
-  background-color: #DCDCDC;
-}
-
-input:invalid {
-  border: 2px solid red;
-  border-radius: 4px;
-}
-
-input[type="text"] {
-  color: rebeccapurple;
-}
-
-textarea[id=more-comments] {
-  width: 100%;
-  resize: none;
+input, textarea {
+  color: darkslateblue;
+  -webkit-transition: background-color 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out;
 }
 
 /*
@@ -168,6 +134,28 @@ input:valid::after {
   display: inline;
 }
 */
+
+input[type=text], 
+input[list=makeupstylelist], 
+input[type=search],
+textarea, 
+select {
+  padding: 8px 12px;
+}
+
+input[type=number] {padding: 12px 6px 12px 8px;}
+
+input[type=button]:hover {cursor: pointer;}
+
+option {padding: 0 12px;}
+
+input[type=search] {
+  background: white url('search-black-24dp/1x/outline_search_black_24dp.png') no-repeat 6px 6px;
+  background-size: 20px 20px;
+  padding-left: 30px;
+}
+
+textarea#more-comments {resize: none;}
 
 label {
   font-weight: bold;
@@ -404,6 +392,15 @@ legend {
 
 select {
   padding: 8px;
+}
+
+input:focus {
+  background-color: #DCDCDC;
+}
+
+input:invalid {
+  border: 2px solid red;
+  border-radius: 4px;
 }
 
 ul.shortcuts {
@@ -645,4 +642,3 @@ Because the styling of the navdrop text needs to be the same as the link styling
 .navdrop:hover .navdrop-content {
   display: block;
 }
-button[type="button"]:hover {box-shadow: 1px 1px 12px hsla(300, 100%, 50%, 0.4);}
