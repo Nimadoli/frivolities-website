@@ -446,6 +446,32 @@ li.shortcuts a:hover {
   height:300px;
 }
 
+ul#page4-chapters {
+  list-style-type: none;
+  counter-reset: section; 
+ /* 
+ The term "section" here has nothing to do with <section> containers. It specifies the counter section.
+ */
+}
+
+li.chapter {
+  counter-reset: subsection;
+}
+
+li.chapter, li.subchapter {
+  padding: 4px 0;
+}
+
+li.chapter::before {
+  counter-increment: section;
+  content: counter(section) ": ";
+}
+
+li.subchapter::before {
+  counter-increment: subsection;
+  content: counter(section) "." counter(subsection) ": ";
+}
+
 #chesswhite, #chessblack {
   width:120px;
   height:120px;
@@ -526,6 +552,7 @@ div.money-box {
 }
 button.money-button {width:100%;}
 svg {background-color: white;}
+
 #positioned-in-front {
   position: relative;
   height: 200px;

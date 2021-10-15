@@ -23,7 +23,19 @@
     </head>
     <body>
         <h1>Playing with multimedia</h1>
-        <div>
+        <ul id="page4-chapters">
+            <li class="chapter">SVG Graphics</li>
+            <li class="chapter">Video Content</li>
+            <li class="chapter">Audio Content</li>
+            <li class="chapter">The Embed Element</li>
+            <li class="chapter">YouTube Videos</li>
+            <li class="chapter">Drag & Drop</li>
+            <li class="chapter">Chess Example</li>
+            <li class="chapter">Reviewing SVG Elements</li>
+            <li class="subchapter">An SVG File Vs. SVG Code</li>
+            <li class="chapter">Images Are Essential</li>
+        </ul>
+        <section>
             <h2>SVG graphics</h2>
             <br>
             <p>SVG is a language for describing 2D graphics in XML. SVG is XML based, which means that every element is available within the SVG DOM. You can attach JavaScript event handlers for an element. In SVG, each drawn shape is remembered as an object. If attributes of an SVG object are changed, the browser can automatically re-render the shape.</p>
@@ -57,52 +69,54 @@
                 <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
                 <text fill="#ffffff" font-size="3.3em" font-family="Impact" x="50" y="90">OMG</text>
             </svg>
-        </div>
-        <p>
-            <h2>Video content</h2>
-            <br>
-            <video height="400" controls autoplay muted>
-              <source src="Snapchat-1720680841.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-        </p>
-        <div style="text-align:center;border:1px solid black;padding:24px;background-color:white;">
-            <button type="button" onclick="playPause()">play/pause</button>
-            <button type="button" onclick="makeBig()">big</button>
-            <button type="button" onclick="makeSmall()">small</button>
-            <button type="button" onclick="makeNormal()">normal</button>
-            <br>
-            <br>
-            <video id="mouthvideo" width="200">
+        </section>
+        <section>
+            <p>
+                <h2>Video content</h2>
+                <br>
+                <video height="400" controls autoplay muted>
                 <source src="Snapchat-1720680841.mp4" type="video/mp4">
-            </video>
-        </div>
-        <script>
-            var myVideo = document.getElementById("mouthvideo");
-            function playPause() {
-                if (myVideo.paused)
-                    myVideo.play();
-                else
-                    myVideo.pause();
-            }
-            function makeBig() {
-                myVideo.width = 400;
-            }
-            function makeSmall() {
-                myVideo.width = 100;
-            }
-            function makeNormal() {
-                myVideo.width = 200;
-            }
-        </script>
-    <noscript>You need to get JavaScript support on you browser!</noscript>
-    <h2>Audio content</h2>
-        <br>
-        <audio controls style="background-color:magenta; padding:14px;">
-            <source src="Just_A_Kiss_-_Mishon.mp3" type="audio/mpeg"> <!-- Mp3 media type is written as "audio/mpeg". -->
-            Your browser does not support the audio element.
-        </audio>
-        <br>
+                Your browser does not support the video tag.
+                </video>
+            </p>
+            <div style="text-align:center;border:1px solid black;padding:24px;background-color:white;">
+                <button type="button" onclick="playPause()">play/pause</button>
+                <button type="button" onclick="makeBig()">big</button>
+                <button type="button" onclick="makeSmall()">small</button>
+                <button type="button" onclick="makeNormal()">normal</button>
+                <br>
+                <br>
+                <video id="mouthvideo" width="200">
+                    <source src="Snapchat-1720680841.mp4" type="video/mp4">
+                </video>
+            </div>
+            <script>
+                var myVideo = document.getElementById("mouthvideo");
+                function playPause() {
+                    if (myVideo.paused)
+                        myVideo.play();
+                    else
+                        myVideo.pause();
+                }
+                function makeBig() {
+                    myVideo.width = 400;
+                }
+                function makeSmall() {
+                    myVideo.width = 100;
+                }
+                function makeNormal() {
+                    myVideo.width = 200;
+                }
+            </script>
+            <noscript>You need to get JavaScript support on you browser!</noscript>
+            <h2>Audio content</h2>
+                <br>
+                <audio controls style="background-color:magenta; padding:14px;">
+                    <source src="Just_A_Kiss_-_Mishon.mp3" type="audio/mpeg"> <!-- Mp3 media type is written as "audio/mpeg". -->
+                    Your browser does not support the audio element.
+                </audio>
+                <br>
+        </section>
         <h2>The embed element</h2>
         <br>
         <embed src="frivolities_master_stylesheet.css" style="border:1px solid black;background-color:white;padding:24px;width:600px;height:300px;">
