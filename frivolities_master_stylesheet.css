@@ -121,6 +121,15 @@ button {
  font-family: 'Allura', serif;
 }
 
+button:hover {cursor: pointer;}
+
+button {
+  font-family: 'Courier New', Courier, monospace !important;
+  /*
+  Using the !important rule will override ALL previous styling rules for that specific property on that element!
+  */
+}
+
 input, textarea {
   color: darkslateblue;
   -webkit-transition: background-color 0.4s ease-in-out;
@@ -297,13 +306,13 @@ li.nav a {
 .floatwide {
   float: left;
   width: 70%;
-  padding-right: 24px;
+  padding-right: 32px;
 }
 
 .floatnarrow {
   float: left;
   width: 30%;
-  padding-right: 24px;
+  padding-right: 32px;
 }
 
 .clearfix::after {
