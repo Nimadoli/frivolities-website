@@ -121,14 +121,18 @@ Experiencing flutters of the heart that resemble an inexplicable nervous suffoca
 <a href="https://www.google.com.au/" title="Go on, click it!">Search</a>
 </p>
 
-<p class="notes">
-<b>Note:</b> Without a forward slash at the end of subfolder addresses, you might generate two requests to the server. Many servers will automatically add a forward slash to the end of the address, and then create a new request.
-</p>
+<div class="notes-container">
+  <p class="notes">
+  <b>Note:</b> Without a forward slash at the end of subfolder addresses, you might generate two requests to the server. Many servers will automatically add a forward slash to the end of the address, and then create a new request.
+  </p>
+</div>
 
 <hr>
 
-<img src="https://i.pinimg.com/originals/b5/a8/5b/b5a85bfa3190ca648af4e94eec831656.jpg" style="max-width:100%;" alt="Sparkly pink lip gloss">
-<p class="notes"><b>Note:</b> Width and Height, or Style? The width, height, and style attributes are all valid in HTML. However, we suggest using the <mark>style attribute</mark>. It prevents styles sheets from changing the size of images by overriding the width and height attributes.</p>
+<img src="https://i.pinimg.com/originals/b5/a8/5b/b5a85bfa3190ca648af4e94eec831656.jpg" style="width:min(65%, 500px);" alt="Sparkly pink lip gloss">
+<div class="notes-container">
+  <p class="notes"><b>Note:</b> Width and Height, or Style? The width, height, and style attributes are all valid in HTML. However, we suggest using the <mark>style attribute</mark>. It prevents styles sheets from changing the size of images by overriding the width and height attributes.</p>
+</div>
 
 <!-- Conditional comments: -->
 <!--
@@ -178,9 +182,11 @@ For the drover’s life has pleasures that the townsfolk never know.
     <img src="https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/1/my-beautiful-lady-ali-franco.jpg" style="width:100%;border:0;" alt="My Beautiful Lady Painting">
     </a>
 
-    <p class="notes">
-    <b>Note:</b> <mark>border:0;</mark> is added to prevent IE9 (and earlier) from displaying a border around the image (when the image is a hyperlink).
-    </p>
+    <div class="notes-container">
+      <p class="notes">
+      <b>Note:</b> <mark>border:0;</mark> is added to prevent IE9 (and earlier) from displaying a border around the image (when the image is a hyperlink).
+      </p>
+    </div>
 
     <p>
       <button type="button" onclick="document.location = '../hello-world/omg-index.html' ">
@@ -195,7 +201,7 @@ For the drover’s life has pleasures that the townsfolk never know.
   </div>
 
   <div class="floatwide">
-    <img src="ihave-no-idea-whatim-doing-funny-lipstick-memes-51089238.png" alt="I have no idea what I'm doing" style="width:cal(100% - 200px);">
+    <img src="ihave-no-idea-whatim-doing-funny-lipstick-memes-51089238.png" alt="I have no idea what I'm doing" style="width:max(80%, 200px);">
     <p class="make-visible">What do you see?</p>
     <p class="invisible">Nothing at all</p>
   </div>
@@ -226,9 +232,12 @@ For the drover’s life has pleasures that the townsfolk never know.
 
 <h3 style="letter-spacing:12px;">This is my <span class="loud">first</span> html page</h3>
 <p>I cannot exaggerate enough how <span class="loud" style="display:block;margin-top:6px;margin-bottom:6px;padding:6px;">important</span> it is to note this.</p>
-<p class="notes"><b>Note:</b> The class and id name is case sensitive! An id name cannot start with a number!</p>
-<p class="notes notes2"><b>Also note:</b> The class and id name must not contain whitespaces (spaces, tabs, etc.), as a space is used to separate two different classes in an tag's attribute field.</p>
-<span style="font-size:350%;margin:0;">&#129300;</span>
+
+<div class="notes-container">
+  <p class="notes"><b>Note:</b> The class and id name is case sensitive! An id name cannot start with a number!</p>
+  <p class="notes notes2"><b>Also note:</b> The class and id name must not contain whitespaces (spaces, tabs, etc.), as a space is used to separate two different classes in an tag's attribute field.</p>
+  <span style="font-size:350%;margin:0;">&#129300;</span>
+</div>
 
 <hr>
 
@@ -257,9 +266,11 @@ And so are <span class="hide">you.</span>
 
     <p><button type="button" onclick="document.location = 'frivolities_page01.html' ">Little high, little low</button></p>
 
-    <p class="notes"><b>Note:</b> The HTML id attribute is used to specify a unique id for an HTML element (e.g. "p", "a", etc). You cannot have more than one element with the same id in an HTML document. As an example, the "p" element can have the id attributes "p1", "p2", "p3", but these cannot be used on the "a" element.</p>
+    <div class="notes-container">
+      <p class="notes"><b>Note:</b> The HTML id attribute is used to specify a unique id for an HTML element (e.g. "p", "a", etc). You cannot have more than one element with the same id in an HTML document. As an example, the "p" element can have the id attributes "p1", "p2", "p3", but these cannot be used on the "a" element.</p>
 
-    <p><b>Tip:</b> Make the id attribute a number, to differentiate it from the class attribute.</p>
+      <p><b>Tip:</b> Make the id attribute a number, to differentiate it from the class attribute.</p>
+    </div>
 
     <a href="../history-of-red/history-of-red-from-artsy.html#cadmiumred" title="Not just pink">About Cadmium Red</a>
   </div>
@@ -294,10 +305,12 @@ And so are <span class="hide">you.</span>
     </tr>  
   </table>
 
-  <p class="notes"><b>Note:</b> It is best practice to use relative file paths (if possible).
-    <br>
-    When using relative file paths, your web pages will not be bound to your current base <abbr title="Uniform Resource Locator">URL</abbr>. All links will work on your own computer (localhost) as well as on your current public domain and your future public domains.
-  </p>
+  <div class="notes-container">
+    <p class="notes"><b>Note:</b> It is best practice to use relative file paths (if possible).
+      <br>
+      When using relative file paths, your web pages will not be bound to your current base <abbr title="Uniform Resource Locator">URL</abbr>. All links will work on your own computer (localhost) as well as on your current public domain and your future public domains.
+    </p>
+  </div>
 
   <p>Find a template of metadata to go into each webpage head section <a href="head content template.html" title="Metadata template">here</a>.</p>
 
@@ -382,7 +395,9 @@ And so are <span class="hide">you.</span>
 
 <button type="button" onclick="alert('Go fuck yourself then &#128540')">Had enough?</button>
 
-<p class="notes"><b>Note:</b> Always specify the type attribute for the button element (type="button"). Different browsers may use different default types for the button element.</p>
+<div class="notes-container">
+  <p class="notes"><b>Note:</b> Always specify the type attribute for the button element (type="button"). Different browsers may use different default types for the button element.</p>
+</div>
 
 <a href="frivolities_page03.html" title="Let's draw with JavaScript">Time to get creative</a>
 <br>
@@ -393,8 +408,10 @@ And so are <span class="hide">you.</span>
 <h2 id="object">The object element</h2>
 <p>The &lt;object&gt; element was originally designed to embed plug-ins, but can be used to include HTML in HTML.</p>
 <object width="100%" height="540px" style="border:1px solid black;" data="frivolities_page03.html"></object>
-<p class="notes"><b>Note:</b> The &lt;object&gt; element can also be used to contain images. Containing images within an &lt;object&gt; element stops the user from being able to save them. Another element that also behaves this way is the &lt;embed&gt; element. Both these elements <em>cannot</em> contain an &lt;alt&gt; tag.</p>
-<object width="20%" data="seal-makeup-animals.jpg"></object>
+<div class="notes-container">
+  <p class="notes"><b>Note:</b> The &lt;object&gt; element can also be used to contain images. Containing images within an &lt;object&gt; element stops the user from being able to save them. Another element that also behaves this way is the &lt;embed&gt; element. Both these elements <em>cannot</em> contain an &lt;alt&gt; tag.</p>
+  <object width="20%" data="seal-makeup-animals.jpg"></object>
+</div>
 
 <p>We're <q lang="fancy">too fancy</q> for normal quotes, so we gotta use fancy characters.</p>
 
@@ -433,11 +450,15 @@ And so are <span class="hide">you.</span>
   <img class="position-behind" alt="Sparkling stars" src="https://thumbs.gfycat.com/CheapThreadbareAsiantrumpetfish-max-1mb.gif" width="260" height="146">
 </div>
 
-<p class="notes"><b>Note:</b> A list also has default margin and padding. To remove this, add margin:0 and padding:0 to &lt;ul> or &lt;ol>:</p>
+<div class="notes-container">
+  <p class="notes"><b>Note:</b> A list also has default margin and padding. To remove this, add margin:0 and padding:0 to &lt;ul> or &lt;ol>:</p>
+</div>
 
 <a title="Makeup bag essentials" href="https://www.collegefashion.net/beauty-and-hair/12-makeup-bag-essentials-every-college-girl-should-own/">Source</a>
 
-<p class="notes"><b>Note:</b> If you do not specify a font size, the default size for normal text, like paragraphs, is 16px (16px=1em). 1em is equal to the <strong>current font</strong> size. The default text size in browsers is 16px. So, the default size of 1em is 16px. The size can be calculated from pixels to em using this formula: pixels/16=em</p>
+<div class="notes-container">
+  <p class="notes"><b>Note:</b> If you do not specify a font size, the default size for normal text, like paragraphs, is 16px (16px=1em). 1em is equal to the <strong>current font</strong> size. The default text size in browsers is 16px. So, the default size of 1em is 16px. The size can be calculated from pixels to em using this formula: pixels/16=em</p>
+</div>
 
 <nav>
   <ul class="nav">

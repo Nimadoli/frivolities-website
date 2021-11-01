@@ -93,6 +93,15 @@ blockquote {
  color: DarkGrey;
 }
 
+.notes-container {
+  border: 12px solid rgb(210, 255, 240);
+  position: relative;
+  left: 32px;
+  width: calc(100% - 64px);
+  padding: 12px;
+  margin: 24px 0;
+}
+
 .notes {
  color: DeepPink;
  font-family: Georgia, serif;
