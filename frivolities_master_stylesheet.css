@@ -687,3 +687,8 @@ Because the styling of the navdrop text needs to be the same as the link styling
 .navdrop:hover .navdrop-content {
   display: block;
 }
+
+.wavy {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+}
